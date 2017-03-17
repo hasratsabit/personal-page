@@ -477,10 +477,6 @@ img {
   box-sizing: border-box;
 }
 
-a {
-  color: #d59541;
-}
-
 .site-header {
   position: relative;
   height: 400px;
@@ -706,10 +702,32 @@ a {
 
 .section-headlines {
   text-align: center;
-  padding: 20px 0 20px;
+  padding: 40px 0 20px;
 }
 
 .section-headlines__title {
-  font-size: 3.75rem;
-  color: blue;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #104f61;
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+
+  .section-headlines__title {
+    font-size: 3.75rem;
+  }
+}
+
+.section-headlines__description {
+  font-size: 1rem;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+@media (min-width: 800px) {
+
+  .section-headlines__description {
+    font-size: 1.6rem;
+  }
 }

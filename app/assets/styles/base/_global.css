@@ -12,7 +12,3 @@ img {
   /*This brings columns in one line. Otherwise columns broke*/
   box-sizing: border-box;
 }
-
-a {
-  color: $mainOrange;
-}
