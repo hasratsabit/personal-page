@@ -1,0 +1,53 @@
+
+.site-header {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: #51B2A8;
+  display: flex;
+  @mixin atMedium {
+    height: 850px;
+  }
+
+  &__header-content {
+    margin: auto;
+    text-align: center;
+    color: #FFF;
+  }
+
+  &__round-image {
+    height: 120px;
+    width: 120px;
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 7px solid rgba(255,255,255, 0.7);
+    @mixin atMedium {
+      height: 250px;
+      width: 250px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 2rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    @mixin atMedium {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    @mixin atMedium {
+      font-size: 2rem;
+    }
+  }
+}
