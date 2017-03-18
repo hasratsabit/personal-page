@@ -21,6 +21,7 @@
     transition: all 5s ease-in-out;
 
     img {
+      max-width: 100%;
       margin: 1;
     }
 

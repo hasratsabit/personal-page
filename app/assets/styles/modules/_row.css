@@ -1,0 +1,11 @@
+
+.row {
+  padding: 30px 0 100px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__medium-4 {
+    margin: auto;
+  }
+}
