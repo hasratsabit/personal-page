@@ -1,11 +1,50 @@
 
 .row {
-  padding: 30px 0 100px;
   max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 10px 10px 80px;
 
   &__medium-4 {
-    margin: auto;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    float: left;
+    @mixin atMedium {
+      flex-basis: 33.33%;
+      margin-top: 30px;
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+
+    @mixin atLarge {
+      flex-basis: 28%;
+      margin-left: 50px;
+    }
+    @mixin atLarger {
+      flex-basis: 25%;
+      margin-left: 115px;
+    }
+  }
+
+ &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
+
+ &--equal-height-at-large {
+    @mixin atLarge {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
   }
 }

@@ -566,8 +566,8 @@ body {
 
 .header-bubbles__bubbles {
   position: absolute;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   padding: 25px;
   opacity: 0.3;
@@ -678,8 +678,8 @@ body {
   }
 
  100% {
-   -webkit-transform: scale(1);
-           transform: scale(1);
+   -webkit-transform: scale(0.7);
+           transform: scale(0.7);
    opacity: 0.3;
  }
 
@@ -693,8 +693,8 @@ body {
   }
 
  100% {
-   -webkit-transform: scale(1);
-           transform: scale(1);
+   -webkit-transform: scale(0.7);
+           transform: scale(0.7);
    opacity: 0.3;
  }
 
@@ -742,17 +742,77 @@ body {
 }
 
 .row {
-  padding: 30px 0 100px;
   max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 10px 10px 80px;
 }
 
 .row__medium-4 {
-  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  float: left;
+}
+
+@media (min-width: 800px) {
+
+  .row__medium-4 {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1010px) {
+
+  .row__medium-4 {
+    -ms-flex-preferred-size: 28%;
+        flex-basis: 28%;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 1350px) {
+
+  .row__medium-4 {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    margin-left: 115px;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .row--equal-height-at-medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-medium > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 1010px) {
+
+  .row--equal-height-at-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-large > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .generic-content p {
@@ -772,6 +832,38 @@ body {
 
   background-color: #FFF;
   box-shadow: 0 0 10px #333;
-  padding: 20px;
-  margin: 20px 0 20px;
+  padding: 10px;
+  border-radius: 7px;
+  position: relative;
+
+}
+
+.proj-box img {
+  max-width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 0 20px #000;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+.proj-box__content {
+  position: relative;
+  padding: 0 10px;
+}
+
+.proj-box__title {
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #104f61;
+}
+
+.proj-box__label {
+  position: absolute;
+  left: 10px;
+  top: -30px;
+  font-size: .6rem;
+  padding: 5px;
+  color: #FFF;
+  border-radius: 3px;
+  background-color: #84c1ff;
 }
