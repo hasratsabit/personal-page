@@ -1,8 +1,12 @@
 .page-sections {
-  height: 500px;
-  overflow: hidden;
+  width: 100%;
 
   &--whitesmoke-bg {
     background-color: #EEEEEE;
   }
+
+  &--background-blue {
+    background-color: $mainBlue;
+  }
+
 }

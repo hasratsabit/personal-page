@@ -13,17 +13,6 @@
     transform: translateY(-15%);
   }
 
-  &__content {
-    position: relative;
-    padding: 0 10px;
-  }
-
-  &__title {
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: $mainBlue;
-  }
-
   &__label {
     position: absolute;
     left: 10px;
@@ -35,4 +24,31 @@
     background-color: #84c1ff;
   }
 
+  &__content {
+    position: relative;
+    padding: 0 10px;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: $mainBlue;
+    @mixin atMedium {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    font-size: 0.7rem;
+    font-weight: 200;
+    color: $mainGreen;
+
+    @mixin atSmall {
+      font-size: 0.8rem;
+    }
+  }
 }

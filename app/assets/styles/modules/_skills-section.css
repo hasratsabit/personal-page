@@ -1,0 +1,25 @@
+.skills-section {
+  margin: auto;
+  text-align: center;
+  padding: 20px 20px 30px;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+
+  &__icons-container {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    border-bottom: 1px solid #FFF;
+    img {
+      margin: auto;
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &__content {
+    margin: auto;
+    color: #FFF;
+  }
+}

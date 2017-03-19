@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Hasrat Sabit</title>
 <link rel="stylesheet" href="./temp/styles/styles.css">
+<script src="https://use.fontawesome.com/fd1a2d8a53.js"></script>
 </head>
 <body>
 
@@ -23,9 +24,9 @@
 
 
 
-<header class="site-header"><!-- Site-Header Starts --->
+<header class="site-header clearfix"><!-- Site-Header Starts --->
 
-    <div class="header-bubbles">
+    <!-- <div class="header-bubbles">
         <div class="header-bubbles__bubbles"><img src="./assets/images/icons/angular.svg" alt=""></div>
         <div class="header-bubbles__bubbles"><img src="./assets/images/icons/nodejs.svg" alt=""></div>
         <div class="header-bubbles__bubbles"><img src="./assets/images/icons/css-3.svg" alt=""></div>
@@ -38,120 +39,184 @@
         <div class="header-bubbles__bubbles"><img src="./assets/images/icons/jquery.svg" alt=""></div>
         <div class="header-bubbles__bubbles"><img src="./assets/images/icons/sass.svg" alt=""></div>
         <div class="header-bubbles__bubbles"><img src="./assets/images/icons/webpack.svg" alt=""></div>
-    </div>
-
-    <div class="site-header__header-content">
-       <img src="/assets/images/team-1.jpg" class="site-header__round-image" alt="">
-       <h1 class="site-header__title">Hasrat Sabit</h1>
-       <p class="site-header__description">Front End Developer</p>
+    </div> -->
+    <div class="site-header__transparent-background">
+      <div class="site-header__header-content">
+         <img src="/assets/images/team-1.jpg" class="site-header__round-image" alt="">
+         <h1 class="site-header__title">Hasrat Sabit</h1>
+         <p class="site-header__description">Front End Developer</p>
+      </div>
     </div>
 
 </header><!-- Site-Header Ends --->
 
 
 
-<div id="projects-section" class="page-sections--whitesmoke-bg clearfix"><!-- Project-Section Starts -->
+<section id="projects-section" class="page-sections page-sections--whitesmoke-bg clearfix"><!-- Project-Section Starts -->
 
-  <div class="section-headlines">
-    <h1 class="section-headlines__title">Projects</h1>
-    <p class="section-headlines__description">Checkout some of projects I built for you</p>
+  <div class="wrapper">
+    <div class="section-headlines">
+      <h1 class="section-headlines__title section-headlines__title--blue">Projects</h1>
+      <p class="section-headlines__description">Checkout some of projects I built for you</p>
+    </div>
+
+    <div class="row row--equal-height-at-medium row--equal-height-at-large">
+        <div class="row__medium-4 row__medium-4--margin-at-large row__medium-4--margin-at-medium row__medium-4--margin-at-small">
+          <div class="proj-box">
+            <img src="assets/images/computer.jpg" alt="">
+              <div class="proj-box__content generic-content">
+                <h2 class="proj-box__title">Learn Routing</h2>
+                <span class="proj-box__label">Angular</span>
+                <span class="proj-box__date">03/19/2017</span>
+                <p class="generic-content--light-gray margin-bottom">Some dummy paragraph about the project</p>
+              </div>
+            <a href="#" class="btn btn__learn-more">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="row__medium-4 row__medium-4--margin-at-large row__medium-4--margin-at-medium row__medium-4--margin-at-small">
+          <div class="proj-box">
+            <img src="assets/images/boy-girl.jpg" alt="">
+              <div class="proj-box__content generic-content">
+                <h2 class="proj-box__title">Learn Functional Programming</h2>
+                <span class="proj-box__label">JavaScript</span>
+                <span class="proj-box__date">03/19/2017</span>
+                <p class="generic-content--light-gray margin-bottom">Some dummy paragraph about the project</p>
+              </div>
+            <a href="#" class="btn btn__learn-more">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="row__medium-4 row__medium-4--margin-at-large row__medium-4--margin-at-medium row__medium-4--margin-at-small">
+          <div class="proj-box">
+            <img src="assets/images/laptop.jpg" alt="">
+              <div class="proj-box__content generic-content">
+                <h2 class="proj-box__title">Learn JSON Web Token</h2>
+                <span class="proj-box__label">Node.js</span>
+                <span class="proj-box__date">03/19/2017</span>
+                <p class="generic-content--light-gray margin-bottom">Some dummy paragraph about the project</p>
+              </div>
+            <a href="#" class="btn btn__learn-more">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+    </div>
   </div>
 
-  <div class="row row--equal-height-at-medium row--equal-height-at-large">
-      <div class="row__medium-4">
-        <div class="proj-box">
-          <img src="assets/images/computer.jpg" alt="">
-            <div class="proj-box__content generic-content">
-              <h2 class="proj-box__title">Learn Routing</h2>
-              <span class="proj-box__label">Angular</span>
-              <p>Some dummy paragraph about the project</p>
-            </div>
-          <button type="button" name="button" class="btn">Learn More</button>
+</section><!-- Project-Section Ends -->
+
+
+
+<section id="skills-section" class="page-sections page-sections--background-blue clearfix"><!-- Skill-Section Starts-->
+
+  <div class="wrapper wrapper--shrink-width">
+    <div class="section-headlines">
+      <h1 class="section-headlines__title section-headlines__title--white">Skills</h1>
+      <p class="section-headlines__description section-headlines__description--white">Some Description Here</p>
+    </div>
+    <div class="row row--equal-height-at-medium row--equal-height-at-large">
+      <div class="row__medium-3">
+        <div class="skills-section">
+          <div class="skills-section__icons-container">
+            <img src="assets/images/icons/html5.svg" alt="HTML Icon">
+          </div>
+          <div class="skills-section__content generic-content">
+            <h3>HTML</h3>
+            <p>Some Description about the Some Description about the</p>
+          </div>
+          <a href="#" class="btn btn--white-color">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="row__medium-4">
-        <div class="proj-box">
-          <img src="assets/images/boy-girl.jpg" alt="">
-            <div class="proj-box__content generic-content">
-              <h2 class="proj-box__title">Learn Functional Programming</h2>
-              <span class="proj-box__label">JavaScript</span>
-              <p>Some dummy paragraph about the project</p>
-            </div>
-          <button type="button" name="button" class="btn">Learn More</button>
+      <div class="row__medium-3">
+        <div class="skills-section">
+          <div class="skills-section__icons-container">
+            <img src="assets/images/icons/css3.svg" alt="HTML Icon">
+          </div>
+          <div class="skills-section__content generic-content">
+            <h3>CSS3</h3>
+            <p>Some Description about the Some Description about the</p>
+          </div>
+          <a href="#" class="btn btn--white-color">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="row__medium-4">
-        <div class="proj-box">
-          <img src="assets/images/laptop.jpg" alt="">
-            <div class="proj-box__content generic-content">
-              <h2 class="proj-box__title">Learn JSON Web Token</h2>
-              <span class="proj-box__label">Node.js</span>
-              <p>Some dummy paragraph about the project</p>
-            </div>
-          <button type="button" name="button" class="btn">Learn More</button>
+      <div class="row__medium-3">
+        <div class="skills-section">
+          <div class="skills-section__icons-container">
+            <img src="assets/images/icons/jquery.svg" alt="HTML Icon">
+          </div>
+          <div class="skills-section__content generic-content">
+            <h3>JQuery</h3>
+            <p>Some Description about the Some Description about the</p>
+          </div>
+          <a href="#" class="btn btn--white-color">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-  </div>
 
-</div><!-- Project-Section Ends -->
+    </div>
 
-
-
-<section class="skills-section"><!-- Skill-Section Starts-->
-
-  <div class="section-headlines">
-    <h1 class="section-headlines__title">Skills</h1>
-    <p class="section-headlines__description">Some Description Here</p>
-  </div>
-
-  <div class="skills-container">
-    HTML Icon
-    <img src="" alt="HTML Icon">
-    <p>Some Description about the language</p>
-  </div>
-  <div class="skills-container">
-    CSS Icon
-    <img src="" alt="HTML Icon">
-    <p>Some Description about the language</p>
-  </div>
-  <div class="skills-container">
-    JavaScript Icon
-    <img src="" alt="HTML Icon">
-    <p>Some Description about the language</p>
-  </div>
-  <div class="skills-container">
-    JQuery Icon
-    <img src="" alt="HTML Icon">
-    <p>Some Description about the language</p>
-  </div>
-  <div class="skills-container">
-    Node Icon
-    <img src="" alt="HTML Icon">
-    <p>Some Description about the language</p>
-  </div>
-  <div class="skills-container">
-    Angular Icon
-    <img src="" alt="HTML Icon">
-    <p>Some Description about the language</p>
+    <div class="row row--equal-height-at-medium row--equal-height-at-large">
+      <div class="row__medium-3">
+        <div class="skills-section">
+          <div class="skills-section__icons-container">
+            <img src="assets/images/icons/javascript.svg" alt="HTML Icon">
+          </div>
+          <div class="skills-section__content generic-content">
+            <h3>JavaScript</h3>
+            <p>Some Description about the Some Description about the</p>
+          </div>
+          <a href="#" class="btn btn--white-color">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row__medium-3">
+        <div class="skills-section">
+          <div class="skills-section__icons-container">
+            <img src="assets/images/icons/nodejs.svg" alt="HTML Icon">
+          </div>
+          <div class="skills-section__content generic-content">
+            <h3>NodeJS</h3>
+            <p>Some Description about the Some Description about the</p>
+          </div>
+          <a href="#" class="btn btn--white-color">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="row__medium-3">
+        <div class="skills-section">
+          <div class="skills-section__icons-container">
+            <img src="assets/images/icons/angular.svg" alt="HTML Icon">
+          </div>
+          <div class="skills-section__content generic-content">
+            <h3>Angular</h3>
+            <p>Some Description about the Some Description about the</p>
+          </div>
+          <a href="#" class="btn btn--white-color">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section><!-- Skill-Section Ends-->
 
 
 
-<section class="contact-section"><!-- Contact-Section Starts-->
+<section id="contact-section" class="page-sections clearfix"><!-- Contact-Section Starts-->
 
-  <div class="section-headlines">
-    <h1 class="section-headlines__title">Contact</h1>
-    <p class="section-headlines__description">Some Description Here</p>
-  </div>
+  <div class="wrapper wrapper--shrink-width">
+    <div class="section-headlines">
+      <h1 class="section-headlines__title section-headlines__title--blue">Contact</h1>
+      <p class="section-headlines__description">Some Description Here</p>
+    </div>
 
-  <div class="contact-form">
-    <input type="text" name="" value="" placeholder="Full Name">
-    <input type="text" name="" value="" placeholder="Email">
-    <input type="text" name="" value="" placeholder="Phone Number (Optional)">
-    <input type="text" name="" value="" placeholder="Full Name">
-    <button type="button" name="button">Send Message</button>
+    <div class="contact-form">
+
+      <div class="row row--equal-height-at-medium row--equal-height-at-large">
+        <div class="row row__medium-6">
+          <input type="text" name="" value="" placeholder="Full Name">
+          <input type="text" name="" value="" placeholder="Email">
+          <input type="text" name="" value="" placeholder="Phone Number (Optional)">
+        </div>
+        <div class="row row__medium-6">
+          <textarea name="name" rows="8" cols="80" placeholder="Say Somthing .."></textarea>
+          <button type="button" name="button">Send Message</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section><!-- Contact-Section Ends-->

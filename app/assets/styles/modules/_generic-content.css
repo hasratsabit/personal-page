@@ -1,11 +1,22 @@
 .generic-content {
   p {
-    line-height: 1.65;
+    line-height: 1.20;
     margin: 0 0 1.8rem 0;
     font-weight: 300;
+    font-size: 1rem;
 
-    @mixin atSmall {
-      font-size: 1.125rem;
+    &.margin-bottom {
+      margin-bottom: 40px;
+      @mixin atSmall {
+        margin-bottom: 60px;
+      }
     }
+    @mixin atSmall {
+      font-size: 1rem;
+    }
+  }
+
+  &--light-gray {
+    color: $lightGray;
   }
 }

@@ -1,0 +1,39 @@
+.btn {
+    padding: 8px 15px;
+    font-weight: 200;
+    font-size: 0.6rem;
+    border: 1px solid;
+    border-radius: 20px;
+    transition: all 300ms ease-in-out;
+    i {
+      margin-left: 5px;
+    }
+    @mixin atMedium {
+      padding: 10px 15px;
+      font-size: 0.8rem;
+    }
+
+  &__learn-more {
+
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border-color: $mainGreen;
+    color: $mainGreen;
+
+    &:hover {
+      color: #FFF;
+      background-color: $mainGreen;
+    }
+  }
+
+  &--white-color {
+    border-color: #FFF;
+    color: #FFF;
+
+    &:hover {
+      background-color: #FFF;
+      color: $mainGreen;
+    }
+  }
+}

@@ -11,3 +11,10 @@ body {
   clear: both;
   visibility: hidden;
 }
+
+a {
+  text-decoration: none;
+  &:active {text-decoration: none;}
+  &:hover {text-decoration: none;}
+  &:focus {text-decoration: none;}
+}

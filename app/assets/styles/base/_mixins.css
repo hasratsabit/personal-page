@@ -2,7 +2,7 @@
 /*Media Query Mixins*/
 
 @define-mixin atSmall {
-  @media (min-width: 530px){
+  @media (min-width: 300px){
     @mixin-content;
   }
 }
@@ -14,12 +14,6 @@
 }
 
 @define-mixin atLarge {
-  @media (min-width: 1010px){
-    @mixin-content;
-  }
-}
-
-@define-mixin atLarger {
   @media (min-width: 1350px){
     @mixin-content;
   }

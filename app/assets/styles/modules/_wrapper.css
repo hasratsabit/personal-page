@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 0 20px;
+  @mixin atMedium{
+    padding: 50px 0 50px;
+  }
+  @mixin atLarge{
+    padding: 50px 0 80px;
+  }
+  &--shrink-width {
+    margin: auto;
+    wdith: 100%;
+    @mixin atMedium{
+      width: 80%;
+    }
+    @mixin atLarge {
+      width: 70%;
+    }
+  }
+}
