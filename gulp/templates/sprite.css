@@ -1,0 +1,16 @@
+/*Do not make any change in this file. It is generated automatically.*/
+
+{{#shapes}}
+
+  {{#first}}
+      .icon {
+        background-image: url('/assets/images/sprites/{{{sprite}}}');
+      }
+  {{/first}}
+
+  .icon--{{base}} {
+      width: {{width.outer}}px;
+      height: {{height.outer}}px;
+      background-position: {{position.relative.xy}};
+  }
+{{/shapes}}

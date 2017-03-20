@@ -16,14 +16,9 @@
     padding: 25px;
     opacity: 0.5;
     display: inline-flex;
-    background-color: #ffc04c;
+    background-color: rgba(255, 255, 255, 0.6);
     animation: header-icons 3s alternate infinite;
     transition: all 5s ease-in-out;
-
-    img {
-      max-width: 100%;
-      margin: 1;
-    }
 
     &:nth-of-type(1) {bottom: 10%; left: 30%; animation-duration: 10s}
     &:nth-of-type(2) {top: 5%; right: 30%; animation-duration: 12s}

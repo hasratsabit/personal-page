@@ -615,16 +615,11 @@ li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  background-color: #ffc04c;
+  background-color: rgba(255, 255, 255, 0.6);
   -webkit-animation: header-icons 3s alternate infinite;
           animation: header-icons 3s alternate infinite;
   -webkit-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
-}
-
-.header-bubbles__bubbles img {
-  max-width: 100%;
-  margin: 1;
 }
 
 .header-bubbles__bubbles:nth-of-type(1) {
@@ -1081,17 +1076,11 @@ li {
   margin: auto;
   height: 50px;
   width: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #FFF;
-}
-
-.skills-section__icons-container img {
-  margin: auto;
-  height: 50px;
-  width: 50px;
 }
 
 .skills-section__content {
@@ -1309,3 +1298,87 @@ textarea:focus {
   color: #FFF;
   opacity: 0.7;
 }
+
+/*Do not make any change in this file. It is generated automatically.*/
+
+.icon {
+        background-image: url('/assets/images/sprites/sprite-a3c6c61b.svg');
+      }
+
+.icon--angular {
+      width: 50px;
+      height: 50px;
+      background-position: 33.333333333333336% 0;
+  }
+
+.icon--css3 {
+      width: 50px;
+      height: 50px;
+      background-position: 0 66.66666666666667%;
+  }
+
+.icon--git {
+      width: 50px;
+      height: 50px;
+      background-position: 0 33.333333333333336%;
+  }
+
+.icon--github {
+      width: 50px;
+      height: 50px;
+      background-position: 33.333333333333336% 33.333333333333336%;
+  }
+
+.icon--gulp {
+      width: 50px;
+      height: 50px;
+      background-position: 66.66666666666667% 0;
+  }
+
+.icon--html5 {
+      width: 50px;
+      height: 50px;
+      background-position: 66.66666666666667% 33.333333333333336%;
+  }
+
+.icon--javascript {
+      width: 50px;
+      height: 50px;
+      background-position: 0 0;
+  }
+
+.icon--jquery {
+      width: 50px;
+      height: 50px;
+      background-position: 33.333333333333336% 66.66666666666667%;
+  }
+
+.icon--mongodb {
+      width: 50px;
+      height: 50px;
+      background-position: 66.66666666666667% 66.66666666666667%;
+  }
+
+.icon--nodejs {
+      width: 50px;
+      height: 50px;
+      background-position: 100% 0;
+  }
+
+.icon--nodemon {
+      width: 50px;
+      height: 50px;
+      background-position: 100% 33.333333333333336%;
+  }
+
+.icon--sass {
+      width: 50px;
+      height: 50px;
+      background-position: 100% 66.66666666666667%;
+  }
+
+.icon--webpack {
+      width: 50px;
+      height: 50px;
+      background-position: 0 100%;
+  }

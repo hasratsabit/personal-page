@@ -9,14 +9,9 @@
     margin: auto;
     height: 50px;
     width: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     display: flex;
     border-bottom: 1px solid #FFF;
-    img {
-      margin: auto;
-      height: 50px;
-      width: 50px;
-    }
   }
 
   &__content {
