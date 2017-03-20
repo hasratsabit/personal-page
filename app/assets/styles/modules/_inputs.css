@@ -33,3 +33,10 @@ input {
     background-color: transparent;
   }
 }
+
+textarea:active,
+textarea:focus {
+  background-color: transparent;
+  border-bottom: 1px solid $accentBlue;
+  transition: all 300ms ease-in-out;
+}
