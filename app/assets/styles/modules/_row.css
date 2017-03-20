@@ -14,14 +14,17 @@
       flex-basis: 28%;
     }
     @mixin atLarge {
-      flex-basis: 25%;
+      flex-basis: 23%;
     }
   }
 
   &__medium-3 {
-    margin: 20px auto;
-    box-sizing: border-box;
     flex-basis: 25%;
+    box-sizing: border-box;
+
+    &--margin-at-small {
+      margin-bottom: 30px;
+    }
   }
 
   &__medium-6 {

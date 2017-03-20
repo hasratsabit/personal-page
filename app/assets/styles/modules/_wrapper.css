@@ -16,4 +16,11 @@
       width: 70%;
     }
   }
+
+  &--smaller-padding {
+    padding-top: 10px;
+    @mixin atMedium {
+      padding: 10px 0 10px;
+    }
+  }
 }
