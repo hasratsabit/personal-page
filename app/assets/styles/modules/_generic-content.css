@@ -5,7 +5,7 @@
     font-weight: 300;
     font-size: 1rem;
 
-    &.margin-bottom {
+    &.b-margin {
       margin-bottom: 40px;
       @mixin atSmall {
         margin-bottom: 60px;

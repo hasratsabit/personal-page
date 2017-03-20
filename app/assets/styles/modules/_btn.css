@@ -5,12 +5,9 @@
     border: 1px solid;
     border-radius: 20px;
     transition: all 300ms ease-in-out;
+
     i {
       margin-left: 5px;
-    }
-    @mixin atMedium {
-      padding: 10px 15px;
-      font-size: 0.8rem;
     }
 
   &__learn-more {
@@ -20,6 +17,10 @@
     right: 15px;
     border-color: $mainGreen;
     color: $mainGreen;
+    @mixin atMedium {
+      padding: 10px 15px;
+      font-size: 0.8rem;
+    }
 
     &:hover {
       color: #FFF;
@@ -27,7 +28,7 @@
     }
   }
 
-  &--white-color {
+  &--white {
     border-color: #FFF;
     color: #FFF;
 
@@ -36,4 +37,25 @@
       color: $mainGreen;
     }
   }
+
+  &--large {
+    border-radius: 0;
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-size: 1.3rem;
+    background-color: $mainBlue;
+    color: #FFF;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $hoverBlue;
+    }
+  }
+
 }

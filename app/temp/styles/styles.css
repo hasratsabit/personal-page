@@ -799,13 +799,13 @@ a:focus {
   font-size: 1rem;
 }
 
-.generic-content p.margin-bottom {
+.generic-content p.b-margin {
   margin-bottom: 40px;
 }
 
 @media (min-width: 300px) {
 
-  .generic-content p.margin-bottom {
+  .generic-content p.b-margin {
     margin-bottom: 60px;
   }
 }
@@ -892,18 +892,11 @@ a:focus {
     border-radius: 20px;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
+
 }
 
 .btn i {
   margin-left: 5px;
-}
-
-@media (min-width: 800px) {
-
-  .btn {
-    padding: 10px 15px;
-    font-size: 0.8rem;
-  }
 }
 
 .btn__learn-more {
@@ -914,19 +907,47 @@ a:focus {
   color: #51B2A8;
 }
 
+@media (min-width: 800px) {
+
+  .btn__learn-more {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+}
+
 .btn__learn-more:hover {
   color: #FFF;
   background-color: #51B2A8;
 }
 
-.btn--white-color {
+.btn--white {
   border-color: #FFF;
   color: #FFF;
 }
 
-.btn--white-color:hover {
+.btn--white:hover {
   background-color: #FFF;
   color: #51B2A8;
+}
+
+.btn--large {
+  border-radius: 0;
+  width: 100%;
+  border: none;
+  height: 50px;
+  font-size: 1.3rem;
+  background-color: #104f61;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.btn--large:active,
+    .btn--large:focus {
+  outline: none;
+}
+
+.btn--large:hover {
+  background-color: #0c2a3d;
 }
 
 .skills-section {
@@ -993,4 +1014,80 @@ a:focus {
   .wrapper--shrink-width {
     width: 70%;
   }
+}
+
+input,
+textarea {
+  position: relative;
+  outline: none;
+  border: none;
+  padding: 5px 0;
+  text-indent: 5px;
+  background-color: #f2f2f2;
+
+}
+
+input:focus::-webkit-input-placeholder,
+input:active::-webkit-input-placeholder {
+
+  font-size: 12px;
+  color: #7fcce5;
+  padding-bottom: 7px;
+  border-color: #7fcce5;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+
+}
+
+input {
+  position: relative;
+  height: 40px;
+  width: 100%;
+}
+
+input:focus {
+  text-indent: 0;
+  border-bottom: 1px solid #7fcce5;
+  background-color: transparent;
+}
+
+textarea {
+
+}
+
+.input-group {
+  width: 100%;
+  display: inline-block;
+}
+
+.left-inputs .input-group {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+
+  .left-inputs .input-group {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 300px) {
+
+  .right-inputs textarea {
+    margin-top: -10px;
+    width: 99%;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .right-inputs textarea {
+    margin-top: 0;
+  }
+}
+
+.right-inputs .input-group {
+  margin-bottom: 15px;
 }

@@ -1,0 +1,29 @@
+
+.input-group {
+  width: 100%;
+  display: inline-block;
+}
+
+.left-inputs {
+  .input-group {
+    margin-bottom: 10px;
+    @mixin atMedium {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.right-inputs {
+  textarea {
+    @mixin atSmall {
+      margin-top: -10px;
+      width: 99%;
+    }
+    @mixin atMedium {
+      margin-top: 0;
+    }
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+}
