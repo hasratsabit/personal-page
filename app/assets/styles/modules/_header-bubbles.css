@@ -1,4 +1,4 @@
-/*.header-bubbles {
+.header-bubbles {
     max-width: 100%;
     visibility: collapse;
     display: none;
@@ -14,7 +14,7 @@
     width: 50px;
     border-radius: 50%;
     padding: 25px;
-    opacity: 0.3;
+    opacity: 0.5;
     display: inline-flex;
     background-color: #82f8dc;
     animation: header-icons 3s alternate infinite;
@@ -48,8 +48,8 @@
   }
 
  100% {
-   transform: scale(0.7);
-   opacity: 0.3;
+   transform: scale(0.8);
+   opacity: 0.5;
  }
 
-}*/
+}

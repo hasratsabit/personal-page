@@ -1,48 +1,35 @@
 
 .row {
   max-width: 100%;
+  @mixin atMedium {
+    display: flex;
+    justify-content: space-around;
+  }
 
   &__medium-4 {
+    margin: 80px auto;
     box-sizing: border-box;
     width: 100%;
     @mixin atMedium {
-      width: 33.33%;
+      flex-basis: 28%;
     }
-
-    &--margin-at-small {
-      margin-bottom: 50px;
-    }
-
-    &--margin-at-medium {
-      @mixin atMedium {
-        margin: 50px 50px;
-      }
-    }
-
-    &--margin-at-large {
-      @mixin atLarge {
-        margin: 50px 100px;
-      }
+    @mixin atLarge {
+      flex-basis: 25%;
     }
   }
 
   &__medium-3 {
-    width: 100%;
     margin: 20px auto;
-    float: left;
     box-sizing: border-box;
-    @mixin atMedium {
-      width: 30%;
-    }
+    flex-basis: 25%;
   }
 
   &__medium-6 {
-    width: 100%;
-    margin: 20px auto;
-    float: left;
+    flex-basis: 100%;
+    margin: auto;
     box-sizing: border-box;
     @mixin atMedium {
-      width: 50%;
+      flex-basis: 50%;
     }
   }
 

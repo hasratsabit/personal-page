@@ -28,6 +28,12 @@
     }
   }
 
+  &--large-white {
+    @mixin atMedium {
+      padding: 12px 15px
+    }
+  }
+
   &--white {
     border-color: #FFF;
     color: #FFF;
