@@ -695,7 +695,7 @@ a:focus {
 }
 
 .page-sections--background-blue {
-  background-color: #104f61;
+  background-color: #66c1e0;
 }
 
 .row {
@@ -979,6 +979,11 @@ a:focus {
   color: #FFF;
 }
 
+.skills-section__title {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
 .wrapper {
   padding: 0 20px;
 }
@@ -1051,10 +1056,6 @@ input:focus {
   text-indent: 0;
   border-bottom: 1px solid #7fcce5;
   background-color: transparent;
-}
-
-textarea {
-
 }
 
 .input-group {
