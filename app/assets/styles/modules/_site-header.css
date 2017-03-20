@@ -8,6 +8,9 @@
   width: 100%;
   height: 400px;
   @mixin atMedium {
+    height: 650px;
+  }
+  @mixin atLarge {
     height: 800px;
   }
 
