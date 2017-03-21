@@ -19,9 +19,15 @@
   }
 
   &__medium-3 {
-    flex-basis: 25%;
     box-sizing: border-box;
+    @mixin atLarge {
+      margin: 0;
+      flex-basis: 25%;
+    }
 
+    &--margin-at-medium {
+      margin: 20px;
+    }
     &--margin-at-small {
       margin-bottom: 30px;
     }

@@ -19,7 +19,7 @@
   }
 }
 
-@define-mixin clearFix {
+@define-mixin clearfix {
   /*This helps with content overlay*/
   &::after {
     content: "";
