@@ -1281,7 +1281,12 @@ textarea:focus {
   background-color: rgba(0,0,0,0.6);
 }
 
+.footer-section__footer-content {
+  padding-top: 30px;
+}
+
 .footer-section__footer-content h3 {
+  padding-bottom: 15px;
   color: #FFF;
   font-size: 1.3rem;
   opacity: 0.7;
@@ -1468,13 +1473,15 @@ textarea:focus {
 .primary-nav {
   position: absolute;
   width: 100%;
+  height: 100%;
   z-index: 20;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.8);
 }
 
 @media (min-width: 800px) {
 
   .primary-nav {
+    height: auto;
     background-color: rgba(0,0,0,0.1);
     padding: 20px;
     position: fixed;
@@ -1482,6 +1489,7 @@ textarea:focus {
 }
 
 .primary-nav ul {
+  margin-top: 60px;
   float: left;
 }
 
@@ -1489,6 +1497,7 @@ textarea:focus {
 
   .primary-nav ul {
     float: right;
+    margin-top: 0;
   }
 }
 
@@ -1534,7 +1543,7 @@ textarea:focus {
 .primary-nav a:hover,
   .primary-nav a:focus {
   padding-left: 30px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(81,178,168, 0.5);
   opacity: 1;
 }
 
@@ -1554,5 +1563,58 @@ textarea:focus {
     height: 3px;
     width: 100%;
     background-color: #7fcce5;
+  }
+}
+
+.mobile-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+  height: 25px;
+  width: 30px;
+  opacity: 0.7;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.mobile-icon:hover,
+  .mobile-icon:active {
+  opacity: 1;
+}
+
+.mobile-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+}
+
+.mobile-icon__middle {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+}
+
+.mobile-icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+}
+
+@media (min-width: 800px) {
+
+  .mobile-icon {
+    display: none;
   }
 }
