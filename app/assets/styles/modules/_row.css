@@ -1,66 +1,23 @@
 
 .row {
   max-width: 100%;
-  @mixin atMedium {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  &__medium-4 {
-    margin: 80px auto;
-    box-sizing: border-box;
-    width: 100%;
-    @mixin atMedium {
-      flex-basis: 28%;
-    }
-    @mixin atLarge {
-      flex-basis: 23%;
-    }
-  }
-
   &__medium-3 {
-    box-sizing: border-box;
-    @mixin atLarge {
-      margin: 0;
-      flex-basis: 25%;
+    width: auto;
+    @mixin atSmall {
+      width: 47%;
+      float: left;
     }
-
-    &--margin-at-medium {
-      margin: 20px;
-    }
-    &--margin-at-small {
-      margin-bottom: 30px;
+    @mixin atMedium {
+      width: 30%;
+      float: left;
     }
   }
 
   &__medium-6 {
-    flex-basis: 100%;
-    margin: auto;
-    box-sizing: border-box;
+    width: auto;
     @mixin atMedium {
-      flex-basis: 50%;
-    }
-  }
-
- &--equal-height-at-medium {
-    @mixin atMedium {
-      display: flex;
-    }
-
-    & > div {
-      float: none;
-      display: flex;
-    }
-  }
-
- &--equal-height-at-large {
-    @mixin atLarge {
-      display: flex;
-    }
-
-    & > div {
-      float: none;
-      display: flex;
+      width: 47%;
+      float: left;
     }
   }
 }

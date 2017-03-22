@@ -2,19 +2,19 @@
 /*Media Query Mixins*/
 
 @define-mixin atSmall {
-  @media (min-width: 300px){
+  @media screen and (min-width: 500px){
     @mixin-content;
   }
 }
 
 @define-mixin atMedium {
-  @media (min-width: 800px){
+  @media screen and (min-width: 800px){
     @mixin-content;
   }
 }
 
 @define-mixin atLarge {
-  @media (min-width: 1350px){
+  @media screen and (min-width: 1350px){
     @mixin-content;
   }
 }
