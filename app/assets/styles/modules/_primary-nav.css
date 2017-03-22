@@ -3,6 +3,9 @@
   width: 100%;
   height: 100%;
   z-index: 20;
+  visibility: collapse;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
   background-color: rgba(0,0,0,0.8);
   @mixin atMedium {
     height: auto;
@@ -12,30 +15,43 @@
   }
 
   ul {
-    margin-top: 60px;
+    width: 100%;
+    margin-top: 70px;
     float: left;
+    position: relative;
     @mixin atMedium {
+      width:auto;
       float: right;
       margin-top: 0;
     }
   }
 
   li {
-    margin: 40px 0;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    &:hover {
+      background-color: rgba($mainGreen, 0.5);
+    }
+
+    &:hover a {
+      padding-left: 20px;
+      opacity: 1;
+    }
     @mixin atMedium {
       display: inline;
       margin-right: 20px;
-    }
-    &:first-child {
-      margin-top: 20px;
-    }
-    &:last-child {
-      margin-bottom: 20px;
+      border-bottom: 0;
+      &:hover {
+        background-color: transparent;
+      }
+      &:hover a {
+        padding: 20px;
+      }
     }
   }
 
   a{
-    padding: 20px 100% 20px 10px;
     color: #FFF;
     opacity: 0.7;
     font-size: 1rem;
@@ -49,12 +65,8 @@
   }
   a:hover,
   a:focus {
-    padding-left: 30px;
-    background-color: rgba($mainGreen, 0.5);
-    opacity: 1;
     @mixin atMedium {
       background-color: rgba(0,0,0,0.5);
-      padding-left: 20px;
       &::before {
         position: absolute;
         bottom: 0;
@@ -62,8 +74,14 @@
         content: "";
         height: 3px;
         width: 100%;
-        background-color: $accentBlue;
+        background-color: $mainGreen;
       }
     }
   }
+
+  &--is-visible {
+      visibility: visible;
+      opacity: 1;
+      transition: all 300ms ease-in-out;
+    }
 }

@@ -25,6 +25,11 @@ gulp.task('watch', function() {
     gulp.start('cssInject')
   });
 
+  // JS watcher
+  watch('./app/assets/scripts/**/*.js', function() {
+    gulp.start('scriptsRefresher');
+  });
+
 });
 
 // This applies each css update on the fly.
@@ -33,3 +38,9 @@ gulp.task('cssInject', ['styles'], function() {
   return gulp.src('./app/temp/styles/styles.css')
     .pipe(browserSync.stream());
 });
+
+// Referesh the browser upon changes in js files
+gulp.task('scriptsRefresher', ['scripts'], function() {
+  return gulp.src('./app/temp/scripts/app.js')
+    .pipe(browserSync.stream());
+})
