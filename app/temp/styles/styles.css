@@ -1052,6 +1052,7 @@ img {
     padding: 10px 15px;
     font-weight: 200;
     font-size: 0.6rem;
+    cursor: pointer;
     border: 1px solid;
     border-radius: 20px;
     -webkit-transition: all 300ms ease-in-out;
@@ -1082,12 +1083,6 @@ img {
 .btn__learn-more:hover {
   color: #FFF;
   background-color: #51B2A8;
-}
-
-.btn__load-more {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -1225,6 +1220,7 @@ textarea {
   position: relative;
   outline: none;
   border: none;
+  font-weight: 100;
   padding: 5px 0;
   text-indent: 5px;
   background-color: #f2f2f2;
@@ -1645,24 +1641,47 @@ textarea:focus {
   transition: all 300ms ease-in-out;
 }
 
-.mobile-icon {
+.primary-nav__menu-content {
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+@media screen and (min-width: 800px) {
+
+  .primary-nav__menu-content {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.primary-nav__menu-content--is-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.menu-icon {
   position: absolute;
   right: 10px;
   top: 10px;
   z-index: 100;
-  height: 25px;
-  width: 30px;
+  height: 20px;
+  width: 25px;
   opacity: 0.7;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-.mobile-icon:hover,
-  .mobile-icon:active {
+.menu-icon:hover,
+  .menu-icon:active {
   opacity: 1;
 }
 
-.mobile-icon::before {
+.menu-icon::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1670,18 +1689,26 @@ textarea:focus {
   width: 100%;
   height: 3px;
   background-color: #FFF;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
-.mobile-icon__middle {
+.menu-icon__middle {
   position: absolute;
-  top: 11px;
+  top: 8px;
   left: 0;
   width: 100%;
   height: 3px;
   background-color: #FFF;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
-.mobile-icon::after {
+.menu-icon::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1689,11 +1716,31 @@ textarea:focus {
   width: 100%;
   height: 3px;
   background-color: #FFF;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 @media screen and (min-width: 800px) {
 
-  .mobile-icon {
+  .menu-icon {
     display: none;
   }
+}
+
+.menu-icon--close-x::before {
+  -webkit-transform: rotate(45deg) scaleX(1.25);
+          transform: rotate(45deg) scaleX(1.25);
+}
+
+.menu-icon--close-x::after {
+  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+          transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+}
+
+.menu-icon--close-x .menu-icon__middle {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }

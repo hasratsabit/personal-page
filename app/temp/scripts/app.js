@@ -93,6 +93,7 @@ var MobileMenu = function () {
 
     this.menuIcon = (0, _jquery2.default)('.menu-icon');
     this.primaryNav = (0, _jquery2.default)('.primary-nav');
+    this.primaryNavContent = (0, _jquery2.default)('.primary-nav__menu-content');
     this.events();
   }
 
@@ -105,6 +106,8 @@ var MobileMenu = function () {
     key: 'toggleTheMenu',
     value: function toggleTheMenu() {
       this.primaryNav.toggleClass("primary-nav--is-visible");
+      this.primaryNavContent.toggleClass('primary-nav__menu-content--is-visible');
+      this.menuIcon.toggleClass("menu-icon--close-x");
     }
   }]);
 

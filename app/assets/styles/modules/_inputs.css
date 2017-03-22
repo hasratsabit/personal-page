@@ -4,6 +4,7 @@ textarea {
   position: relative;
   outline: none;
   border: none;
+  font-weight: 100;
   padding: 5px 0;
   text-indent: 5px;
   background-color: #f2f2f2;
