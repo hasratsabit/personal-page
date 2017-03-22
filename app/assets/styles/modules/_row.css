@@ -11,6 +11,61 @@
       width: 30%;
       float: left;
     }
+
+    &--proj-width-at-large {
+       @mixin atLarge {
+         width: 23%;
+       }
+    }
+
+    &--proj-margin {
+      margin-bottom: 40px;
+      @mixin atSmall {
+        margin-left: 25px;
+        margin-bottom: 50px;
+        &:first-child {
+          margin-left: 10px;
+        }
+      }
+      @mixin atMedium {
+        margin-top: 40px;
+        margin-left: 34.5px;
+        &:first-child {
+          margin-left: 30px;
+        }
+      }
+      @mixin atLarge {
+        margin-left: 148px;
+        &:first-child {
+          margin-left: 148px;
+        }
+      }
+    }
+
+    &--skills-margin {
+      margin-bottom: 30px;
+      @mixin atSmall {
+        margin-left: 15px;
+      }
+      @mixin atMedium {
+        margin-left: 30px;
+      }
+      @mixin atLarge {
+        margin-left: 33px;
+      }
+    }
+
+    &--footer-margin {
+      @mixin atSmall {
+        margin-left: 15px;
+      }
+      @mixin atMedium {
+        margin-left: 30px;
+      }
+      @mixin atLarge {
+        margin-left: 40px;
+      }
+    }
   }
 
   &__medium-6 {
@@ -18,6 +73,11 @@
     @mixin atMedium {
       width: 47%;
       float: left;
+    }
+    &--contact-margin {
+      @mixin atMedium {
+        margin-top: 50px;
+      }
     }
   }
 }

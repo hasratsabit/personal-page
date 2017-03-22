@@ -1,5 +1,8 @@
 .page-sections {
   width: 100%;
+  @mixin atMedium {
+    padding-bottom: 50px;
+  }
 
   &--whitesmoke-bg {
     background-color: #EEEEEE;
