@@ -12,8 +12,14 @@
     opacity: 1;
     height: auto;
     background-color: rgba(0,0,0,0.1);
-    padding: 20px;
+    padding: 25px;
     position: fixed;
+
+    /*CSS modifier when scrolling*/
+    &--darker-background {
+      background-color: rgba(0,0,0,0.8);
+      padding: 20px;
+    }
   }
 
   ul {
@@ -31,56 +37,55 @@
   li {
     padding: 20px;
     cursor: pointer;
-    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba($white, 0.2);
     &:hover {
-      background-color: rgba($mainGreen, 0.5);
-    }
+      background-color: rgba($mainOrange, 0.5);
+      -webkit-backface-visibility: hidden;/*Hides shakey state when hovering*/
+      transition: all 300ms ease-in-out;
 
-    &:hover a {
-      padding-left: 20px;
-      opacity: 1;
+      a {
+        padding-left: 10px;
+      }
     }
     @mixin atMedium {
       display: inline;
-      margin-right: 20px;
-      border-bottom: 0;
+      margin-right: 30px;
+      padding: 0;
+      border: none;
       &:hover {
         background-color: transparent;
-      }
-      &:hover a {
-        padding: 20px;
+
+        a {
+          padding-left: 25px;
+        }
       }
     }
   }
 
   a{
     color: #FFF;
-    opacity: 0.7;
+    opacity: 0.8;
     font-size: 1rem;
     font-weight: 100;
     transition: all 300ms ease-in-out;
     @mixin atMedium {
-      padding: 20px;
+      padding: 25px;
       font-size: 1.2rem;
       position: relative;
-    }
-  }
-  a:hover,
-  a:focus {
-    @mixin atMedium {
-      background-color: rgba(0,0,0,0.5);
-      &::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        height: 3px;
-        width: 100%;
-        background-color: $mainGreen;
+
+      &.is-current-link {
+        color: $mainOrange;
       }
     }
   }
+  a:hover {
+    opacity: 1;
+   @mixin atMedium {
+     color: $mainOrange;
+   }
+  }
 
+  /*Mobile css rules */
   &--is-visible {
       visibility: visible;
       opacity: 1;

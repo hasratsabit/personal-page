@@ -460,6 +460,8 @@ template {
   display: none;
 }
 
+/*For rgba shorthand*/
+
 /*Media Query Mixins*/
 
 body {
@@ -1582,8 +1584,13 @@ textarea:focus {
     opacity: 1;
     height: auto;
     background-color: rgba(0,0,0,0.1);
+    padding: 25px;
+    position: fixed;/*CSS modifier when scrolling*/
+  }
+
+  .primary-nav--darker-background {
+    background-color: rgba(0,0,0,0.8);
     padding: 20px;
-    position: fixed;
   }
 }
 
@@ -1606,24 +1613,27 @@ textarea:focus {
 .primary-nav li {
   padding: 20px;
   cursor: pointer;
-  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
 .primary-nav li:hover {
-  background-color: rgba(81,178,168, 0.5);
+  background-color: rgba(255,165,0, 0.5);
+  -webkit-backface-visibility: hidden;/*Hides shakey state when hovering*/
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .primary-nav li:hover a {
-  padding-left: 20px;
-  opacity: 1;
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 800px) {
 
   .primary-nav li {
     display: inline;
-    margin-right: 20px;
-    border-bottom: 0;
+    margin-right: 30px;
+    padding: 0;
+    border: none;
   }
 
   .primary-nav li:hover {
@@ -1631,13 +1641,13 @@ textarea:focus {
   }
 
   .primary-nav li:hover a {
-    padding: 20px;
+    padding-left: 25px;
   }
 }
 
 .primary-nav a{
   color: #FFF;
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 1rem;
   font-weight: 100;
   -webkit-transition: all 300ms ease-in-out;
@@ -1647,29 +1657,28 @@ textarea:focus {
 @media screen and (min-width: 800px) {
 
   .primary-nav a {
-    padding: 20px;
+    padding: 25px;
     font-size: 1.2rem;
     position: relative;
   }
+
+  .primary-nav a.is-current-link {
+    color: #FFA500;
+  }
+}
+
+.primary-nav a:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 800px) {
 
-  .primary-nav a:hover,
-  .primary-nav a:focus {
-    background-color: rgba(0,0,0,0.5);
-  }
-
-  .primary-nav a:hover::before, .primary-nav a:focus::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: "";
-    height: 3px;
-    width: 100%;
-    background-color: #51B2A8;
+  .primary-nav a:hover {
+    color: #FFA500;
   }
 }
+
+/*Mobile css rules */
 
 .primary-nav--is-visible {
   visibility: visible;
