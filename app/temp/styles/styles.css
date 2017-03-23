@@ -562,25 +562,24 @@ img {
 @media screen and (min-width: 800px) {
 
   .site-header__round-image {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
 }
 
 .site-header__title {
   margin-bottom: 5px;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 2rem;
   display: block;
   text-transform: uppercase;
-  letter-spacing: 5px;
   text-align: center;
 }
 
 @media screen and (min-width: 800px) {
 
   .site-header__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -588,13 +587,12 @@ img {
   margin-top: 0;
   font-size: 1rem;
   font-weight: 100;
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: 800px) {
 
   .site-header__description {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -848,8 +846,9 @@ img {
 
 @media screen and (min-width: 1350px) {
 
-  .row__medium-3--proj-width-at-large {
+  .row__medium-3--width-at-large {
     width: 23%;
+    float: left;
   }
 }
 
@@ -884,11 +883,11 @@ img {
 @media screen and (min-width: 1350px) {
 
   .row__medium-3--proj-margin {
-    margin-left: 148px;
+    margin-left: 104px;
   }
 
   .row__medium-3--proj-margin:first-child {
-    margin-left: 148px;
+    margin-left: 104px;
   }
 }
 
@@ -913,7 +912,7 @@ img {
 @media screen and (min-width: 1350px) {
 
   .row__medium-3--skills-margin {
-    margin-left: 33px;
+    margin-left: 102px;
   }
 }
 
@@ -955,6 +954,44 @@ img {
   .row__medium-6--contact-margin {
     margin-top: 50px;
   }
+
+  .row__medium-6--contact-margin:last-of-type {
+    margin-left: 40px;
+  }
+}
+
+/*Begin Equal Height Rules*/
+
+@media screen and (min-width: 500px) {
+
+  .flexbox .row--equal-height-at-medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.flexbox .row--equal-height-at-medium > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 1350px) {
+
+  .flexbox .row--equal-height-at-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.flexbox .row--equal-height-at-large > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .generic-content p {
@@ -1005,7 +1042,7 @@ img {
 .proj-box__label {
   position: absolute;
   left: 10px;
-  top: -30px;
+  top: -25px;
   font-size: .6rem;
   padding: 5px;
   color: #FFF;
@@ -1028,13 +1065,13 @@ img {
 @media screen and (min-width: 800px) {
 
   .proj-box__title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
 .proj-box__date {
   position: absolute;
-  top: -25px;
+  top: -20px;
   right: 10px;
   font-size: 0.7rem;
   font-weight: 200;

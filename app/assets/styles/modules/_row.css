@@ -12,9 +12,10 @@
       float: left;
     }
 
-    &--proj-width-at-large {
+    &--width-at-large {
        @mixin atLarge {
          width: 23%;
+         float: left;
        }
     }
 
@@ -35,9 +36,9 @@
         }
       }
       @mixin atLarge {
-        margin-left: 148px;
+        margin-left: 104px;
         &:first-child {
-          margin-left: 148px;
+          margin-left: 104px;
         }
       }
     }
@@ -51,7 +52,7 @@
         margin-left: 30px;
       }
       @mixin atLarge {
-        margin-left: 33px;
+        margin-left: 102px;
       }
     }
 
@@ -77,7 +78,34 @@
     &--contact-margin {
       @mixin atMedium {
         margin-top: 50px;
+        &:last-of-type {
+          margin-left: 40px;
+        }
       }
     }
   }
+
+  /*Begin Equal Height Rules*/
+
+.flexbox &--equal-height-at-medium {
+  @mixin atSmall {
+    display: flex;
+  }
+
+  & > div {
+    float: none;
+    display: flex;
+  }
+}
+
+.flexbox &--equal-height-at-large {
+  @mixin atLarge {
+    display: flex;
+  }
+
+  & > div {
+    float: none;
+    display: flex;
+  }
+}
 }

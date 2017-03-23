@@ -41,21 +41,20 @@
     border-radius: 50%;
     border: 7px solid rgba(255,255,255, 0.7);
     @mixin atMedium {
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
     }
   }
 
   &__title {
     margin-bottom: 5px;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 2rem;
     display: block;
     text-transform: uppercase;
-    letter-spacing: 5px;
     text-align: center;
     @mixin atMedium {
-      font-size: 3rem;
+      font-size:  2.5rem;
     }
   }
 
@@ -63,9 +62,8 @@
     margin-top: 0;
     font-size: 1rem;
     font-weight: 100;
-    text-transform: uppercase;
     @mixin atMedium {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 }

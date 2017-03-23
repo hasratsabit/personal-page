@@ -15,7 +15,7 @@
   &__label {
     position: absolute;
     left: 10px;
-    top: -30px;
+    top: -25px;
     font-size: .6rem;
     padding: 5px;
     color: #FFF;
@@ -34,13 +34,13 @@
     margin-bottom: 10px;
     color: $mainBlue;
     @mixin atMedium {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
   &__date {
     position: absolute;
-    top: -25px;
+    top: -20px;
     right: 10px;
     font-size: 0.7rem;
     font-weight: 200;
