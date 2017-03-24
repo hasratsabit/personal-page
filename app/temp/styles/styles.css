@@ -1775,6 +1775,8 @@ textarea:focus {
   }
 }
 
+/* css rule for open and close in small device*/
+
 .menu-icon--close-x::before {
   -webkit-transform: rotate(45deg) scaleX(1.25);
           transform: rotate(45deg) scaleX(1.25);
@@ -1789,4 +1791,32 @@ textarea:focus {
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.reveal-item {
+  opacity: 0;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.reveal-item--is-visible {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slide-down {
+  opacity: 0;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.slide-down--is-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }

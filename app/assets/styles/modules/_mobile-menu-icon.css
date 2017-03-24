@@ -53,6 +53,7 @@
   }
 }
 
+/* css rule for open and close in small device*/
 .menu-icon--close-x {
   &::before {
     transform: rotate(45deg) scaleX(1.25);

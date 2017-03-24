@@ -1,0 +1,22 @@
+
+.reveal-item {
+  opacity: 0;
+  transition: all 1.5s ease-out;
+  transform: translateX(-20px);
+
+  &--is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-down {
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+  transform: translateY(-20px);
+
+  &--is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
