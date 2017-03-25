@@ -38,6 +38,12 @@
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba($white, 0.2);
+
+    &:last-child {
+      border-bottom: 0;
+      text-align: center;
+      padding-top: 30px;
+    }
     &:hover {
       background-color: rgba($mainOrange, 0.5);
       -webkit-backface-visibility: hidden;/*Hides shakey state when hovering*/
@@ -49,7 +55,7 @@
     }
     @mixin atMedium {
       display: inline;
-      margin-right: 30px;
+      margin-right: 10px;
       padding: 0;
       border: none;
       &:hover {
@@ -65,12 +71,12 @@
   a{
     color: #FFF;
     opacity: 0.8;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 100;
     transition: all 300ms ease-in-out;
     @mixin atMedium {
       padding: 25px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       position: relative;
 
       &.is-current-link {

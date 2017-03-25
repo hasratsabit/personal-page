@@ -1,11 +1,4 @@
 .wrapper {
-  padding: 0 20px;
-  @mixin atMedium{
-    padding: 50px 0 50px;
-  }
-  @mixin atLarge{
-    padding: 50px 0 80px;
-  }
   &--shrink-width {
     margin: auto;
     wdith: 100%;
@@ -18,7 +11,7 @@
   }
 
   &--smaller-padding {
-    padding-top: 10px;
+    padding: 0 20px;
     @mixin atMedium {
       padding: 10px 0 10px;
     }

@@ -1,0 +1,20 @@
+.social-media {
+
+  &--round {
+    padding: 15px;
+    border-radius: 50%;
+
+  }
+
+  &__facebook {
+    background-color: #31698A;
+  }
+
+  &__google {
+    background-color: #ff5353;
+  }
+
+  &__twitter {
+    background-color: #3399FF;
+  }
+}

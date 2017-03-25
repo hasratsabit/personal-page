@@ -11192,7 +11192,7 @@ var RevealModule = function () {
           handler: function handler() {
             setTimeout(function (i) {
               (0, _jquery2.default)(currentItem).addClass(that.animate);
-            }, 300 * (i + 1));
+            }, 200 * (i + 1));
           },
           offset: that.offsetPercentage
         });
@@ -11292,7 +11292,7 @@ var StickyNav = function () {
               (0, _jquery2.default)(currentSectionLink).addClass('is-current-link');
             }
           },
-          offset: "20%"
+          offset: "30%"
         });
         // Highlights when scrolling up.
         new Waypoint({
@@ -11694,7 +11694,7 @@ var stickyNav = new _StickyNav2.default();
 new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%", "reveal-item", "reveal-item--is-visible");
 new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%", "reveal-item", "reveal-item--is-visible");
 new _RevealModule2.default((0, _jquery2.default)(".footer-section__footer-content"), "100%", "reveal-item", "reveal-item--is-visible");
-new _RevealModule2.default((0, _jquery2.default)(".input-group"), "80%", "slide-down", "slide-down--is-visible");
+new _RevealModule2.default((0, _jquery2.default)(".contact-form .input-group"), "80%", "slide-down", "slide-down--is-visible");
 
 /***/ })
 /******/ ]);

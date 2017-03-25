@@ -24,7 +24,7 @@ class RevealModule {
         handler: function() {
           setTimeout(function(i) {
             $(currentItem).addClass(that.animate);
-          }, 300 * (i+1));
+          }, 200 * (i+1));
         },
         offset: that.offsetPercentage
       })

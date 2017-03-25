@@ -48,7 +48,7 @@ class StickyNav {
             $(currentSectionLink).addClass('is-current-link');
           }
         },
-        offset: "20%"
+        offset: "30%"
       });
       // Highlights when scrolling up.
       new Waypoint({
