@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11156,6 +11156,69 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Overlay = function () {
+  function Overlay() {
+    _classCallCheck(this, Overlay);
+
+    this.Model = (0, _jquery2.default)('.model');
+    this.openModelBtn = (0, _jquery2.default)('.btn__login');
+    this.closeModelBtn = (0, _jquery2.default)('.model__close');
+    this.eventsHandler();
+  }
+
+  _createClass(Overlay, [{
+    key: 'eventsHandler',
+    value: function eventsHandler() {
+      this.openModelBtn.click(this.openModel.bind(this));
+      this.closeModelBtn.click(this.closeModel.bind(this));
+      (0, _jquery2.default)(document).keyup(this.keyPress.bind(this));
+    }
+  }, {
+    key: 'keyPress',
+    value: function keyPress(e) {
+      if (e.keyCode == 27) {
+        this.closeModel();
+      }
+    }
+  }, {
+    key: 'openModel',
+    value: function openModel() {
+      this.Model.addClass("model--is-visible");
+      return false;
+    }
+  }, {
+    key: 'closeModel',
+    value: function closeModel() {
+      this.Model.removeClass('model--is-visible');
+    }
+  }]);
+
+  return Overlay;
+}();
+
+exports.default = Overlay;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
@@ -11206,7 +11269,7 @@ var RevealModule = function () {
 exports.default = RevealModule;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11222,7 +11285,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(5);
+var _jquerySmoothScroll = __webpack_require__(6);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11316,7 +11379,7 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11664,7 +11727,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11678,18 +11741,23 @@ var _MobileMenu = __webpack_require__(2);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyNav = __webpack_require__(4);
+var _StickyNav = __webpack_require__(5);
 
 var _StickyNav2 = _interopRequireDefault(_StickyNav);
 
-var _RevealModule = __webpack_require__(3);
+var _RevealModule = __webpack_require__(4);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
+
+var _Overlay = __webpack_require__(3);
+
+var _Overlay2 = _interopRequireDefault(_Overlay);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 var stickyNav = new _StickyNav2.default();
+var overlay = new _Overlay2.default();
 
 new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%", "reveal-item", "reveal-item--is-visible");
 new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%", "reveal-item", "reveal-item--is-visible");

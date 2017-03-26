@@ -2,7 +2,7 @@
 /*Media Query Mixins*/
 
 @define-mixin atSmall {
-  @media screen and (min-width: 500px){
+  @media screen and (min-width: 570px){
     @mixin-content;
   }
 }

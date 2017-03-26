@@ -7,7 +7,7 @@
       width: 47%;
       float: left;
     }
-    
+
     @mixin atMedium {
       width: 30%;
       float: left;
@@ -75,6 +75,12 @@
     @mixin atMedium {
       width: 47%;
       float: left;
+    }
+
+    &--width-at-small {
+      @mixin atSmall {
+        width: 47%;
+      }
     }
     &--contact-margin {
       @mixin atMedium {

@@ -832,7 +832,7 @@ img {
   width: auto;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .row__medium-3 {
     width: 47%;
@@ -860,7 +860,7 @@ img {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .row__medium-3--proj-margin {
     margin-left: 25px;
@@ -899,7 +899,7 @@ img {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .row__medium-3--skills-margin {
     margin-left: 15px;
@@ -920,7 +920,7 @@ img {
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .row__medium-3--footer-margin {
     margin-left: 15px;
@@ -953,6 +953,13 @@ img {
   }
 }
 
+@media screen and (min-width: 570px) {
+
+  .row__medium-6--width-at-small {
+    width: 47%;
+  }
+}
+
 @media screen and (min-width: 800px) {
 
   .row__medium-6--contact-margin {
@@ -966,7 +973,7 @@ img {
 
 /*Begin Equal Height Rules*/
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .flexbox .row--equal-height-at-medium {
     display: -webkit-box;
@@ -1009,14 +1016,14 @@ img {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .generic-content p.b-margin {
     margin-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .generic-content p {
     font-size: 1rem;
@@ -1082,7 +1089,7 @@ img {
   color: #51B2A8;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .proj-box__date {
     font-size: 0.8rem;
@@ -1165,13 +1172,13 @@ img {
   background-color: #0c2a3d;
 }
 
-.btn__signup {
+.btn__login {
   background-color: #186c9f;
   font-weight: 100;
   padding: 10px 25px !important;
 }
 
-.btn__signup:hover {
+.btn__login:hover {
   background-color: #1d3f52;
   color: #FFF !important;
 }
@@ -1180,29 +1187,16 @@ img {
   background-color: #7a7a7a;
   font-weight: 100;
   color: #FFF;
-}
-
-.btn__register:first-child {
-  padding: 15px 50px;
+  width: 50%;
   float: left;
+  padding: 12px 0;
+  text-align: center;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
-  .btn__register:first-child {
-    padding: 20px 100px;
-  }
-}
-
-.btn__register:last-child {
-  padding: 15px 50px;
-  float: right;
-}
-
-@media screen and (min-width: 500px) {
-
-  .btn__register:last-child {
-    padding: 20px 72px;
+  .btn__register {
+    padding: 20px 0;
   }
 }
 
@@ -1267,6 +1261,17 @@ img {
 
   .wrapper--shrink-width {
     width: 70%;
+  }
+}
+
+.wrapper--model-padding-at-small {
+  padding: 0 30px;
+}
+
+@media screen and (min-width: 570px) {
+
+  .wrapper--model-padding-at-small {
+    padding: 0;
   }
 }
 
@@ -1860,34 +1865,51 @@ textarea:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  visibility: visible;
   height: 100%;
   width: 100%;
   z-index: 200;
+  opacity: 0;
+  visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 
+}
+
+.model--is-visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .model__close {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #FFF;
   opacity: 0.7;
-  top: 80px;
-  right: 60px;
+  top: 60px;
+  right: 30px;
   text-align: center;
   font-weight: 100;
+  cursor: pointer;
 }
 
 .model__close span {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
+
+  .model__close span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 570px) {
 
   .model__close {
-    top: 13%;
-    right: 26%;
+    font-size: 1.5rem;
+    top: 4%;
+    right: 31%;
   }
 }
 
@@ -1902,46 +1924,46 @@ textarea:focus {
 @media screen and (min-width: 1350px) {
 
   .model__close {
-    top: 13%;
-    right: 37.5%;
+    top: 14%;
+    right: 34%;
   }
 }
 
 .model__container {
-  position: absolute;
-  top: 150px;
-  left: 20px;
+  position: relative;
+  top: 100px;
   background-color: #FFF;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 570px) {
 
   .model__container {
-    top: 18%;
-    left: 17%;
+    left: 186px;
   }
 }
 
 @media screen and (min-width: 800px) {
 
   .model__container {
-    left: 31%;
-    top: 15%;
+    top: 110px;
+    left: 335px;
   }
 }
 
 @media screen and (min-width: 1350px) {
 
   .model__container {
-    left: 37.5%;
-    top: 20%;
+    top: 200px;
+    left: 505px;
   }
 }
 
 .model__login {
-  text-align: center;/*visibility: collapse;*/
-  padding: 30px 20px;
+  text-align: center;
+  padding: 40px 20px 20px;
 }
+
+/*visibility: collapse;*/
 
 @media screen and (min-width: 800px) {
 

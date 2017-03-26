@@ -68,7 +68,7 @@
     }
   }
 
-  &__signup {
+  &__login {
 
     background-color: #186c9f;
     font-weight: 100;
@@ -84,22 +84,13 @@
     background-color: $lightGray;
     font-weight: 100;
     color: #FFF;
+    width: 50%;
+    float: left;
+    padding: 12px 0;
+    text-align: center;
 
-    &:first-child {
-      padding: 15px 50px;
-      float: left;
-
-      @mixin atSmall {
-        padding: 20px 100px;
-      }
-    }
-    &:last-child {
-      padding: 15px 50px;
-      float: right;
-
-      @mixin atSmall {
-        padding: 20px 72px;
-      }
+    @mixin atSmall {
+      padding: 20px 0;
     }
   }
 
