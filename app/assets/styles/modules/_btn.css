@@ -86,12 +86,19 @@
     color: #FFF;
 
     &:first-child {
+      padding: 15px 50px;
       float: left;
-      padding: 20px 136px;
+
+      @mixin atMedium {
+        padding: 20px 136px;
+      }
     }
     &:last-child {
-      padding: 20px 109px;
+      padding: 15px 50px;
       float: right;
+      @mixin atMedium {
+        padding: 20px 109px;
+      }
     }
   }
 
