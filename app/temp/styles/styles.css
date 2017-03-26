@@ -1187,10 +1187,10 @@ img {
   float: left;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 500px) {
 
   .btn__register:first-child {
-    padding: 20px 136px;
+    padding: 20px 100px;
   }
 }
 
@@ -1199,10 +1199,10 @@ img {
   float: right;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 500px) {
 
   .btn__register:last-child {
-    padding: 20px 109px;
+    padding: 20px 72px;
   }
 }
 
@@ -1855,7 +1855,7 @@ textarea:focus {
 }
 
 .model {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1868,20 +1868,13 @@ textarea:focus {
 
 }
 
-@media screen and (min-width: 800px) {
-
-  .model {
-    position: fixed;
-  }
-}
-
 .model__close {
   position: absolute;
   font-size: 1.5rem;
   color: #FFF;
   opacity: 0.7;
-  top: 13%;
-  right: 29%;
+  top: 80px;
+  right: 60px;
   text-align: center;
   font-weight: 100;
 }
@@ -1890,18 +1883,58 @@ textarea:focus {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 500px) {
+
+  .model__close {
+    top: 13%;
+    right: 26%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .model__close {
+    top: 7%;
+    right: 31%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+
+  .model__close {
+    top: 13%;
+    right: 37.5%;
+  }
+}
+
 .model__container {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 20px;
   background-color: #FFF;
+}
+
+@media screen and (min-width: 500px) {
+
+  .model__container {
+    top: 18%;
+    left: 17%;
+  }
 }
 
 @media screen and (min-width: 800px) {
 
   .model__container {
+    left: 31%;
+    top: 15%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+
+  .model__container {
+    left: 37.5%;
     top: 20%;
-    left: 35%;
   }
 }
 

@@ -89,15 +89,16 @@
       padding: 15px 50px;
       float: left;
 
-      @mixin atMedium {
-        padding: 20px 136px;
+      @mixin atSmall {
+        padding: 20px 100px;
       }
     }
     &:last-child {
       padding: 15px 50px;
       float: right;
-      @mixin atMedium {
-        padding: 20px 109px;
+
+      @mixin atSmall {
+        padding: 20px 72px;
       }
     }
   }
