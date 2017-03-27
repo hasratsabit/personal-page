@@ -12,7 +12,8 @@ textarea {
 
 }
 
-input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+input:active::-webkit-input-placeholder {
 
   font-size: 12px;
   color: $accentBlue;

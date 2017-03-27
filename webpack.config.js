@@ -6,7 +6,7 @@ module.exports = {
   },
   output: {
     path: "./app/temp/scripts",
-    filename: "[name].js"
+    filename: "[name].js" // This keeps the name of file dynamic. (vendor)
   },
   module: {
     loaders: [

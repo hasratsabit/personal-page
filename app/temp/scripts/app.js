@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11443,7 +11443,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(10);
+var _jquerySmoothScroll = __webpack_require__(9);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11459,6 +11459,7 @@ var StickyNav = function () {
   function StickyNav() {
     _classCallCheck(this, StickyNav);
 
+    this.lazyImages = (0, _jquery2.default)('.lazyload');
     this.primaryNav = (0, _jquery2.default)('.primary-nav');
     this.primaryNavDarkTrigger = (0, _jquery2.default)('.site-header__header-content');
     this.pageSections = (0, _jquery2.default)('.page-sections');
@@ -11466,12 +11467,23 @@ var StickyNav = function () {
     this.createWayNavWaypoint();
     this.currentPageSectionWaypoint();
     this.addSmoothScroll();
+    this.refreshWaypoints();
   }
 
-  // Changes the background color.
+  // This is for the premature content load caused by lazyload
 
 
   _createClass(StickyNav, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on(function () {
+        Waypoint.refreshAll();
+      });
+    }
+
+    // Changes the background color.
+
+  }, {
     key: "createWayNavWaypoint",
     value: function createWayNavWaypoint() {
       var that = this;
@@ -11537,8 +11549,7 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 9 */,
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11886,7 +11897,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -4,6 +4,7 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class StickyNav {
   constructor() {
+    this.lazyImages = $('.lazyload');
     this.primaryNav = $('.primary-nav');
     this.primaryNavDarkTrigger = $('.site-header__header-content');
     this.pageSections = $('.page-sections');
@@ -11,6 +12,14 @@ class StickyNav {
     this.createWayNavWaypoint();
     this.currentPageSectionWaypoint();
     this.addSmoothScroll();
+    this.refreshWaypoints();
+  }
+
+  // This is for the premature content load caused by lazyload
+  refreshWaypoints() {
+    this.lazyImages.on(function() {
+      Waypoint.refreshAll();
+    });
   }
 
   // Changes the background color.
