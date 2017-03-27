@@ -18,7 +18,7 @@ class ContactReveal {
             $(currentItem).addClass("input-group--is-visible");
           }, 100 * (i+1));
         },
-        offset: "60%"
+        offset: "80%"
       });
     });
   }

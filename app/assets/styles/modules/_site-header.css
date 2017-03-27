@@ -48,7 +48,7 @@
     /* For Animation */
     opacity: 0;
     transform: translateY(-70%);
-    transition: all 3s ease-in-out;
+    transition: all 1s ease-in-out;
 
     &--dropdown {
       opacity: 1;
@@ -62,13 +62,19 @@
 
   &__title {
     margin-bottom: 5px;
-    font-weight: 100;
+    font-weight: 900;
     font-size: 2rem;
     display: block;
     text-transform: uppercase;
     text-align: center;
+    /* For Animate */
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+    &--slide-in {
+      transform: translateX(0);
+    }
     @mixin atMedium {
-      font-size:  2.5rem;
+      font-size:  3rem;
     }
   }
 
@@ -76,6 +82,12 @@
     margin-top: 0;
     font-size: 1rem;
     font-weight: 100;
+    /* For Animate */
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+    &--slide-in {
+      transform: translateX(0);
+    }
     @mixin atMedium {
       font-size: 1.5rem;
     }

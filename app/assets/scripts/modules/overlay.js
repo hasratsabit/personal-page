@@ -3,6 +3,7 @@ import $ from "jquery";
 class Overlay {
   constructor() {
     this.Model = $('.model');
+    this.modelContainer = $('.model__container');
     this.openModelBtn = $('.btn__login');
     this.closeModelBtn = $('.model__close');
     this.login = $('.model__login');
@@ -30,11 +31,13 @@ class Overlay {
 
   openModel() {
     this.Model.addClass("model--is-visible");
+    this.modelContainer.addClass('model__container--is-expanded');
     return false;
   }
 
   closeModel() {
     this.Model.removeClass('model--is-visible');
+    this.modelContainer.removeClass('model__container--is-expanded');
   }
 
   loginIsOpen() {

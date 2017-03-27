@@ -1,11 +1,14 @@
 .footer-section {
   position: relative;
-  background-image: url("../../assets/images/header-bg-image.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   height: 520px;
   margin-top: 50px;
+  &.lazyloaded {
+      background-image: url("../../assets/images/header-bg-image.jpg");
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+  }
+
   @mixin atMedium {
     height: 220px;
   }

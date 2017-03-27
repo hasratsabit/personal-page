@@ -57,6 +57,16 @@
     top: 100px;
     background-color: #FFF;
 
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+    transition: all 300ms ease-out;
+
+    &--is-expanded {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+
     @mixin atSmall {
       left: 186px;
     }

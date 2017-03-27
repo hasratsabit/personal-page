@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11134,7 +11134,7 @@ var ContactReveal = function () {
               (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
             }, 100 * (i + 1));
           },
-          offset: "60%"
+          offset: "80%"
         });
       });
     }
@@ -11147,6 +11147,31 @@ exports.default = ContactReveal;
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var HeaderParallax = function HeaderParallax() {
+  _classCallCheck(this, HeaderParallax);
+};
+
+exports.default = HeaderParallax;
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11176,6 +11201,8 @@ var HeaderReveal = function () {
 
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.roundImage = (0, _jquery2.default)('.site-header__round-image');
+    this.headerTitle = (0, _jquery2.default)('.site-header__title');
+    this.headerDescription = (0, _jquery2.default)('.site-header__description');
     this.createHeaderWaypoint();
   }
 
@@ -11183,6 +11210,8 @@ var HeaderReveal = function () {
     key: "createHeaderWaypoint",
     value: function createHeaderWaypoint() {
       this.roundImage.addClass('site-header__round-image--dropdown');
+      this.headerTitle.addClass('site-header__title--slide-in');
+      this.headerDescription.addClass('site-header__description--slide-in');
     }
   }]);
 
@@ -11192,7 +11221,7 @@ var HeaderReveal = function () {
 exports.default = HeaderReveal;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11242,7 +11271,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11267,6 +11296,7 @@ var Overlay = function () {
     _classCallCheck(this, Overlay);
 
     this.Model = (0, _jquery2.default)('.model');
+    this.modelContainer = (0, _jquery2.default)('.model__container');
     this.openModelBtn = (0, _jquery2.default)('.btn__login');
     this.closeModelBtn = (0, _jquery2.default)('.model__close');
     this.login = (0, _jquery2.default)('.model__login');
@@ -11300,12 +11330,14 @@ var Overlay = function () {
     key: 'openModel',
     value: function openModel() {
       this.Model.addClass("model--is-visible");
+      this.modelContainer.addClass('model__container--is-expanded');
       return false;
     }
   }, {
     key: 'closeModel',
     value: function closeModel() {
       this.Model.removeClass('model--is-visible');
+      this.modelContainer.removeClass('model__container--is-expanded');
     }
   }, {
     key: 'loginIsOpen',
@@ -11331,7 +11363,7 @@ var Overlay = function () {
 exports.default = Overlay;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11395,7 +11427,7 @@ var RevealModule = function () {
 exports.default = RevealModule;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11411,7 +11443,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(8);
+var _jquerySmoothScroll = __webpack_require__(10);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11505,7 +11537,8 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 8 */
+/* 9 */,
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11853,7 +11886,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11863,29 +11896,33 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _MobileMenu = __webpack_require__(4);
+var _MobileMenu = __webpack_require__(5);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyNav = __webpack_require__(7);
+var _StickyNav = __webpack_require__(8);
 
 var _StickyNav2 = _interopRequireDefault(_StickyNav);
 
-var _RevealModule = __webpack_require__(6);
+var _RevealModule = __webpack_require__(7);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
 
-var _Overlay = __webpack_require__(5);
+var _Overlay = __webpack_require__(6);
 
 var _Overlay2 = _interopRequireDefault(_Overlay);
 
-var _HeaderReveal = __webpack_require__(3);
+var _HeaderReveal = __webpack_require__(4);
 
 var _HeaderReveal2 = _interopRequireDefault(_HeaderReveal);
 
 var _ContactReveal = __webpack_require__(2);
 
 var _ContactReveal2 = _interopRequireDefault(_ContactReveal);
+
+var _HeaderParallax = __webpack_require__(3);
+
+var _HeaderParallax2 = _interopRequireDefault(_HeaderParallax);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11894,6 +11931,7 @@ var stickyNav = new _StickyNav2.default();
 var overlay = new _Overlay2.default();
 var headerReveal = new _HeaderReveal2.default();
 var contactReveal = new _ContactReveal2.default();
+var headerParallax = new _HeaderParallax2.default();
 
 new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%");
 new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%");
