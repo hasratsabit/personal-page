@@ -3,17 +3,15 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class RevealModule {
 
-  constructor(element, offset, beforeAnimate, animate) {
+  constructor(element, offset) {
     this.itemsToReveal = element;
-    this.animate = animate;
-    this.beforeAnimate = beforeAnimate;
     this.hideInitially();
     this.offsetPercentage = offset;
     this.createWayPoints();
   }
 
   hideInitially() {
-    this.itemsToReveal.addClass(this.beforeAnimate);
+    this.itemsToReveal.addClass("reveal-item");
   }
   createWayPoints() {
     let that = this;
@@ -23,12 +21,12 @@ class RevealModule {
         element: currentItem,
         handler: function() {
           setTimeout(function(i) {
-            $(currentItem).addClass(that.animate);
-          }, 200 * (i+1));
+            $(currentItem).addClass("reveal-item--is-visible");
+          }, 180 * (i+1));
         },
         offset: that.offsetPercentage
-      })
-    })
+      });
+    });
   }
 
 }

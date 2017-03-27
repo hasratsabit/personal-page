@@ -30,8 +30,9 @@
   }
 
   &--large-white {
+    position: relative;
     font-weight: 200;
-    padding: 12px 15px;
+    padding: 12px 25px;
     font-size: 0.6rem;
     border-radius: 20px;
     border: 1px solid;
@@ -80,17 +81,42 @@
       }
   }
 
-  &__register {
-    background-color: $lightGray;
+  &__auth {
+    position: absolute;
     font-weight: 100;
-    color: #FFF;
     width: 50%;
-    float: left;
     padding: 12px 0;
     text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    &:last-child {
+      right: 0;
+    }
 
     @mixin atSmall {
       padding: 20px 0;
+    }
+  }
+
+  &--login {
+    background-color: #006b8e;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      background-color: #006b8e;
+    }
+    &--not-active {
+      background-color: #0099cc;
+    }
+  }
+
+  &--signup {
+    background-color: #0099cc;
+    transition: all 300ms ease-in-out;
+
+    &:hover,
+    &--active {
+      background-color: #006b8e;
     }
   }
 

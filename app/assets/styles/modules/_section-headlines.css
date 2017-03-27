@@ -20,7 +20,7 @@
     }
 
     &--blue {
-      color: $mainBlue;
+      color: $darkBlue;
     }
 
     &--white {

@@ -4,10 +4,15 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  height: 500px;
+  height: 520px;
   margin-top: 50px;
   @mixin atMedium {
-    height: 200px;
+    height: 220px;
+  }
+
+  .icon {
+    float: left;
+    margin-right: 10px;
   }
 
   &__transparent-background {
@@ -45,10 +50,6 @@
       &:hover {
         opacity: 1;
       }
-    }
-
-    i {
-      margin-right: 10px;
     }
     p {
         color: #FFF;

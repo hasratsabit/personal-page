@@ -32,7 +32,7 @@
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 10px;
-    color: $mainBlue;
+    color: $darkBlue;
     @mixin atMedium {
       font-size: 1.2rem;
     }

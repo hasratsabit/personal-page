@@ -7,6 +7,7 @@ textarea {
   font-weight: 100;
   padding: 5px 0;
   text-indent: 5px;
+  border-radius: none !important;
   background-color: #f2f2f2;
 
 }

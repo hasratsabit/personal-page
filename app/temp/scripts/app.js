@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11106,6 +11106,108 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ContactReveal = function () {
+  function ContactReveal() {
+    _classCallCheck(this, ContactReveal);
+
+    this.inputReveal = (0, _jquery2.default)('.contact-form .input-group');
+    this.createWayPoints();
+  }
+
+  _createClass(ContactReveal, [{
+    key: "createWayPoints",
+    value: function createWayPoints() {
+      this.inputReveal.each(function (i) {
+        var currentItem = this;
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            setTimeout(function (i) {
+              (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
+            }, 100 * (i + 1));
+          },
+          offset: "60%"
+        });
+      });
+    }
+  }]);
+
+  return ContactReveal;
+}();
+
+exports.default = ContactReveal;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var HeaderReveal = function () {
+  function HeaderReveal() {
+    _classCallCheck(this, HeaderReveal);
+
+    this.siteHeader = (0, _jquery2.default)('.site-header');
+    this.roundImage = (0, _jquery2.default)('.site-header__round-image');
+    this.createHeaderWaypoint();
+  }
+
+  _createClass(HeaderReveal, [{
+    key: "createHeaderWaypoint",
+    value: function createHeaderWaypoint() {
+      this.roundImage.addClass('site-header__round-image--dropdown');
+    }
+  }]);
+
+  return HeaderReveal;
+}();
+
+exports.default = HeaderReveal;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11140,7 +11242,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11167,6 +11269,10 @@ var Overlay = function () {
     this.Model = (0, _jquery2.default)('.model');
     this.openModelBtn = (0, _jquery2.default)('.btn__login');
     this.closeModelBtn = (0, _jquery2.default)('.model__close');
+    this.login = (0, _jquery2.default)('.model__login');
+    this.signup = (0, _jquery2.default)('.model__signup');
+    this.loginBtn = (0, _jquery2.default)('.btn--login');
+    this.signupBtn = (0, _jquery2.default)('.btn--signup');
     this.eventsHandler();
   }
 
@@ -11176,7 +11282,13 @@ var Overlay = function () {
       this.openModelBtn.click(this.openModel.bind(this));
       this.closeModelBtn.click(this.closeModel.bind(this));
       (0, _jquery2.default)(document).keyup(this.keyPress.bind(this));
+
+      this.loginBtn.click(this.loginIsOpen.bind(this));
+      this.signupBtn.click(this.signupIsOpen.bind(this));
     }
+
+    // Close the overaly with esc key
+
   }, {
     key: 'keyPress',
     value: function keyPress(e) {
@@ -11195,6 +11307,22 @@ var Overlay = function () {
     value: function closeModel() {
       this.Model.removeClass('model--is-visible');
     }
+  }, {
+    key: 'loginIsOpen',
+    value: function loginIsOpen() {
+      this.signup.removeClass('model__signup--is-open');
+      this.login.removeClass('model__login--is-closed');
+      this.loginBtn.removeClass('btn--login--not-active');
+      this.signupBtn.removeClass('btn--signup--active');
+    }
+  }, {
+    key: 'signupIsOpen',
+    value: function signupIsOpen() {
+      this.login.addClass('model__login--is-closed');
+      this.signup.addClass('model__signup--is-open');
+      this.signupBtn.addClass('btn--signup--active');
+      this.loginBtn.addClass('btn--login--not-active');
+    }
   }]);
 
   return Overlay;
@@ -11203,7 +11331,7 @@ var Overlay = function () {
 exports.default = Overlay;
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11228,12 +11356,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RevealModule = function () {
-  function RevealModule(element, offset, beforeAnimate, animate) {
+  function RevealModule(element, offset) {
     _classCallCheck(this, RevealModule);
 
     this.itemsToReveal = element;
-    this.animate = animate;
-    this.beforeAnimate = beforeAnimate;
     this.hideInitially();
     this.offsetPercentage = offset;
     this.createWayPoints();
@@ -11242,7 +11368,7 @@ var RevealModule = function () {
   _createClass(RevealModule, [{
     key: "hideInitially",
     value: function hideInitially() {
-      this.itemsToReveal.addClass(this.beforeAnimate);
+      this.itemsToReveal.addClass("reveal-item");
     }
   }, {
     key: "createWayPoints",
@@ -11254,8 +11380,8 @@ var RevealModule = function () {
           element: currentItem,
           handler: function handler() {
             setTimeout(function (i) {
-              (0, _jquery2.default)(currentItem).addClass(that.animate);
-            }, 200 * (i + 1));
+              (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+            }, 180 * (i + 1));
           },
           offset: that.offsetPercentage
         });
@@ -11269,7 +11395,7 @@ var RevealModule = function () {
 exports.default = RevealModule;
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11285,7 +11411,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(6);
+var _jquerySmoothScroll = __webpack_require__(8);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11379,7 +11505,7 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11727,7 +11853,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11737,32 +11863,41 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _MobileMenu = __webpack_require__(2);
+var _MobileMenu = __webpack_require__(4);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyNav = __webpack_require__(5);
+var _StickyNav = __webpack_require__(7);
 
 var _StickyNav2 = _interopRequireDefault(_StickyNav);
 
-var _RevealModule = __webpack_require__(4);
+var _RevealModule = __webpack_require__(6);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
 
-var _Overlay = __webpack_require__(3);
+var _Overlay = __webpack_require__(5);
 
 var _Overlay2 = _interopRequireDefault(_Overlay);
+
+var _HeaderReveal = __webpack_require__(3);
+
+var _HeaderReveal2 = _interopRequireDefault(_HeaderReveal);
+
+var _ContactReveal = __webpack_require__(2);
+
+var _ContactReveal2 = _interopRequireDefault(_ContactReveal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 var stickyNav = new _StickyNav2.default();
 var overlay = new _Overlay2.default();
+var headerReveal = new _HeaderReveal2.default();
+var contactReveal = new _ContactReveal2.default();
 
-new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%", "reveal-item", "reveal-item--is-visible");
-new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%", "reveal-item", "reveal-item--is-visible");
-new _RevealModule2.default((0, _jquery2.default)(".footer-section__footer-content"), "100%", "reveal-item", "reveal-item--is-visible");
-new _RevealModule2.default((0, _jquery2.default)(".contact-form .input-group"), "80%", "slide-down", "slide-down--is-visible");
+new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%");
+new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%");
+new _RevealModule2.default((0, _jquery2.default)(".footer-section__footer-content"), "100%");
 
 /***/ })
 /******/ ]);

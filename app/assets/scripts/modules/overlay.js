@@ -5,6 +5,10 @@ class Overlay {
     this.Model = $('.model');
     this.openModelBtn = $('.btn__login');
     this.closeModelBtn = $('.model__close');
+    this.login = $('.model__login');
+    this.signup = $('.model__signup');
+    this.loginBtn = $('.btn--login');
+    this.signupBtn = $('.btn--signup');
     this.eventsHandler();
   }
 
@@ -12,8 +16,12 @@ class Overlay {
     this.openModelBtn.click(this.openModel.bind(this));
     this.closeModelBtn.click(this.closeModel.bind(this));
     $(document).keyup(this.keyPress.bind(this));
+
+    this.loginBtn.click(this.loginIsOpen.bind(this));
+    this.signupBtn.click(this.signupIsOpen.bind(this));
   }
 
+  // Close the overaly with esc key
   keyPress(e) {
     if(e.keyCode == 27) {
       this.closeModel();
@@ -27,6 +35,20 @@ class Overlay {
 
   closeModel() {
     this.Model.removeClass('model--is-visible');
+  }
+
+  loginIsOpen() {
+    this.signup.removeClass('model__signup--is-open');
+    this.login.removeClass('model__login--is-closed');
+    this.loginBtn.removeClass('btn--login--not-active');
+    this.signupBtn.removeClass('btn--signup--active');
+  }
+
+  signupIsOpen() {
+    this.login.addClass('model__login--is-closed');
+    this.signup.addClass('model__signup--is-open');
+    this.signupBtn.addClass('btn--signup--active');
+    this.loginBtn.addClass('btn--login--not-active');
   }
 }
 

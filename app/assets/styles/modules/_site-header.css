@@ -15,22 +15,27 @@
   }
 
   &__transparent-background {
-    position: absolute;
+    position: relative;
+    text-align: center;
+    z-index: 10;
     height: 100%;
     width: 100%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     background-color: rgba(0,0,0,0.6);
 
   }
 
   &__header-content {
-    margin: auto;
+    transform: translateY(50%);
     text-align: center;
     color: #FFF;
+
+    @mixin atMedium {
+      transform: translateY(70%);
+    }
   }
 
   &__round-image {
@@ -40,6 +45,15 @@
     overflow: hidden;
     border-radius: 50%;
     border: 7px solid rgba(255,255,255, 0.7);
+    /* For Animation */
+    opacity: 0;
+    transform: translateY(-70%);
+    transition: all 3s ease-in-out;
+
+    &--dropdown {
+      opacity: 1;
+      transform: translateY(0);
+    }
     @mixin atMedium {
       height: 200px;
       width: 200px;
@@ -63,7 +77,7 @@
     font-size: 1rem;
     font-weight: 100;
     @mixin atMedium {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 }

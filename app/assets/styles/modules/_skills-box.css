@@ -24,6 +24,7 @@
     @mixin atMedium {
       padding-bottom: 0;
     }
+
   }
 
   &__title {
