@@ -12,6 +12,14 @@ var config = {
   },
   mode: {
     css: {
+      // Replace svg with png in browser with no support.
+      variables: {
+        replaceSvgWithPng: function() {
+          return function(sprite, render) {
+            return render(sprite).split('.svg').join('.png');
+          }
+        }
+      },
       sprite: 'sprite.svg',
       render: {
         css: {
@@ -33,10 +41,16 @@ gulp.task('createSprite', ['beginClean'], function() {
     .pipe(gulp.dest('./app/temp/sprite'));
 });
 
-gulp.task('copySpriteGraphic', ['createSprite'], function() {
-  return gulp.src('./app/temp/sprite/css/**/*.svg')
-    .pipe(gulp.dest('./app/assets/images/sprites'));
+gulp.task('createPngCopy', ['createSprite'], function() {
+  return gulp.src('./app/temp/sprite/css/*.svg')
+    .pipe(svg2png())
+    .pipe(gulp.dest('./app/temp/sprite/css'))
 })
+
+gulp.task('copySpriteGraphic', ['createPngCopy'], function() {
+  return gulp.src('./app/temp/sprite/css/**/*.{svg,png}')
+    .pipe(gulp.dest('./app/assets/images/sprites'));
+});
 
 // This copies the sprite css file from bundle temp folder to the assets foler for use
 gulp.task('copySpriteCSS', ['createSprite'], function() {
@@ -51,4 +65,4 @@ gulp.task('endClean', ['copySpriteCSS', 'copySpriteGraphic'], function() {
 });
 
 // Automates all the tasks
-gulp.task('icons', ['beginClean','createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
+gulp.task('icons', ['beginClean','createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
