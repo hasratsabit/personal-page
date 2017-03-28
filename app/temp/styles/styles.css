@@ -1008,44 +1008,10 @@ img {
   }
 }
 
-/*Begin Equal Height Rules*/
-
-@media screen and (min-width: 570px) {
-
-  .flexbox .row--equal-height-at-medium {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.flexbox .row--equal-height-at-medium > div {
-  float: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width: 1350px) {
-
-  .flexbox .row--equal-height-at-large {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.flexbox .row--equal-height-at-large > div {
-  float: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .generic-content p {
   line-height: 1.20;
   margin: 0 0 1.8rem 0;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 1rem;
 }
 
@@ -1073,11 +1039,12 @@ img {
 
 .proj-box {
 
+  position: relative;
+  height: 300px;
   background-color: #FFF;
   box-shadow: 0 0 10px #333;
   padding: 10px;
   border-radius: 7px;
-  position: relative;
 }
 
 .proj-box img {
@@ -1106,7 +1073,7 @@ img {
 .proj-box__title {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 10px;
+  padding: 10px 0;
   color: #1d3f52;
 }
 
@@ -1133,6 +1100,13 @@ img {
   }
 }
 
+.proj-box__learn-more {
+  margin-left: 10px;
+  color: #F6546A;
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+
 .btn {
     cursor: pointer;
     -webkit-transition: all 300ms ease-in-out;
@@ -1142,32 +1116,6 @@ img {
 
 .btn i {
   margin-left: 5px;
-}
-
-.btn__learn-more {
-  position: absolute;
-  padding: 10px 15px;
-  bottom: 15px;
-  right: 15px;
-  border-color: #51B2A8;
-  color: #51B2A8;
-  font-weight: 200;
-  font-size: 0.6rem;
-  border-radius: 20px;
-  border: 1px solid;
-}
-
-@media screen and (min-width: 800px) {
-
-  .btn__learn-more {
-    padding: 10px 15px;
-    font-size: 0.8rem;
-  }
-}
-
-.btn__learn-more:hover {
-  color: #FFF;
-  background-color: #51B2A8;
 }
 
 .btn--large-white {
@@ -1539,11 +1487,11 @@ textarea:focus {
 /*Do not make any change in this file. It is generated automatically.*/
 
 .icon {
-        background-image: url('/assets/images/sprites/sprite-bdb35659.svg');
+        background-image: url('/assets/images/sprites/sprite-552a7e12.svg');
       }
 
 .no-svg .icon {
-        background-image: url('/assets/images/sprites/sprite-bdb35659.png');
+        background-image: url('/assets/images/sprites/sprite-552a7e12.png');
       }
 
 .icon--angular {
@@ -1559,9 +1507,9 @@ textarea:focus {
   }
 
 .icon--facebook {
-      width: 26px;
-      height: 26px;
-      background-position: 28.571428571428573% 85.71428571428571%;
+      width: 20px;
+      height: 20px;
+      background-position: 27.659574468085108% 82.97872340425532%;
   }
 
 .icon--git {
@@ -1576,10 +1524,10 @@ textarea:focus {
       background-position: 66.66666666666667% 0;
   }
 
-.icon--google-plus {
-      width: 26px;
-      height: 26px;
-      background-position: 57.142857142857146% 85.71428571428571%;
+.icon--google {
+      width: 20px;
+      height: 20px;
+      background-position: 48.93617021276596% 82.97872340425532%;
   }
 
 .icon--gulp {
@@ -1591,7 +1539,7 @@ textarea:focus {
 .icon--home {
       width: 16px;
       height: 16px;
-      background-position: 27.083333333333332% 94.79166666666667%;
+      background-position: 91.66666666666667% 81.25%;
   }
 
 .icon--html5 {
@@ -1639,73 +1587,73 @@ textarea:focus {
 .icon--small--arrow-small {
       width: 9px;
       height: 12px;
-      background-position: 97.48743718592965% 79.59183673469387%;
+      background-position: 66.33165829145729% 89.79591836734694%;
   }
 
 .icon--small--facebook-small {
       width: 16px;
       height: 16px;
-      background-position: 67.70833333333333% 81.25%;
+      background-position: 58.333333333333336% 81.25%;
   }
 
 .icon--small--github-small {
       width: 16px;
       height: 16px;
-      background-position: 76.04166666666667% 81.25%;
+      background-position: 66.66666666666667% 81.25%;
   }
 
 .icon--small--home-small {
       width: 16px;
       height: 16px;
-      background-position: 84.375% 81.25%;
+      background-position: 75% 81.25%;
   }
 
 .icon--small--instagram-small {
       width: 16px;
       height: 16px;
-      background-position: 92.70833333333333% 81.25%;
+      background-position: 83.33333333333333% 81.25%;
   }
 
 .icon--small--linkedin-small {
       width: 16px;
       height: 16px;
-      background-position: 77.08333333333333% 94.79166666666667%;
+      background-position: 60.416666666666664% 91.66666666666667%;
   }
 
 .icon--small--phone-small {
       width: 16px;
       height: 16px;
-      background-position: 35.416666666666664% 94.79166666666667%;
+      background-position: 100% 81.25%;
   }
 
 .icon--small--square-small {
       width: 16px;
       height: 16px;
-      background-position: 43.75% 94.79166666666667%;
+      background-position: 27.083333333333332% 91.66666666666667%;
   }
 
 .icon--small--twitter-small {
       width: 16px;
       height: 16px;
-      background-position: 52.083333333333336% 94.79166666666667%;
+      background-position: 35.416666666666664% 91.66666666666667%;
   }
 
 .icon--small--web-small {
       width: 16px;
       height: 16px;
-      background-position: 60.416666666666664% 94.79166666666667%;
+      background-position: 43.75% 91.66666666666667%;
   }
 
 .icon--square {
       width: 16px;
       height: 16px;
-      background-position: 68.75% 94.79166666666667%;
+      background-position: 52.083333333333336% 91.66666666666667%;
   }
 
 .icon--twitter {
-      width: 26px;
-      height: 26px;
-      background-position: 42.857142857142854% 85.71428571428571%;
+      width: 20px;
+      height: 20px;
+      background-position: 38.297872340425535% 82.97872340425532%;
   }
 
 .icon--webpack {
@@ -2120,7 +2068,7 @@ textarea:focus {
 }
 
 .model__title {
-  padding: 40px 0;
+  padding: 40px 0 20px;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 100;
@@ -2129,14 +2077,9 @@ textarea:focus {
 @media screen and (min-width: 800px) {
 
   .model__title {
-    padding: 50px 0;
+    padding: 50px 0 20px;
     font-size: 1.5rem;
   }
-}
-
-.model__api {
-  display: inline;
-  margin: 5px;
 }
 
 .model__seperator {
@@ -2182,25 +2125,22 @@ textarea:focus {
 }
 
 .social-media--round {
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  padding: 5px;
+  background-color: #006b8e;
+  padding: 10px;
+  display: inline-block;
 }
 
-@media screen and (min-width: 800px) {
-
-  .social-media--round {
-    padding: 15px;
-  }
-}
-
-.social-media__facebook {
+.social-media--facebook {
   background-color: #31698A;
 }
 
-.social-media__google {
+.social-media--google {
   background-color: #ff5353;
 }
 
-.social-media__twitter {
+.social-media--twitter {
   background-color: #3399FF;
 }

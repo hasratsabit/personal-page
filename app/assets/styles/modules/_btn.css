@@ -6,29 +6,6 @@
       margin-left: 5px;
     }
 
-  &__learn-more {
-
-    position: absolute;
-    padding: 10px 15px;
-    bottom: 15px;
-    right: 15px;
-    border-color: $mainGreen;
-    color: $mainGreen;
-    font-weight: 200;
-    font-size: 0.6rem;
-    border-radius: 20px;
-    border: 1px solid;
-    @mixin atMedium {
-      padding: 10px 15px;
-      font-size: 0.8rem;
-    }
-
-    &:hover {
-      color: #FFF;
-      background-color: $mainGreen;
-    }
-  }
-
   &--large-white {
     position: relative;
     font-weight: 200;

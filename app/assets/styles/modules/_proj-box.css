@@ -1,10 +1,11 @@
 .proj-box {
 
+  position: relative;
+  height: 300px;
   background-color: #FFF;
   box-shadow: 0 0 10px #333;
   padding: 10px;
   border-radius: 7px;
-  position: relative;
 
   img {
     border-radius: 7px;
@@ -31,7 +32,7 @@
   &__title {
     font-size: 1rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    padding: 10px 0;
     color: $darkBlue;
     @mixin atMedium {
       font-size: 1.2rem;
@@ -49,5 +50,12 @@
     @mixin atSmall {
       font-size: 0.8rem;
     }
+  }
+
+  &__learn-more {
+    margin-left: 10px;
+    color: #F6546A;
+    font-weight: 200;
+    font-size: 0.8rem;
   }
 }
