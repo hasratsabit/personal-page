@@ -41,6 +41,5 @@ gulp.task('cssInject', ['styles'], function() {
 
 // Referesh the browser upon changes in js files
 gulp.task('scriptsRefresher', ['scripts'], function() {
-  return gulp.src('./app/temp/scripts/app.js')
-    .pipe(browserSync.stream());
+  browserSync.reload();
 })

@@ -1224,6 +1224,8 @@ img {
 }
 
 .skills-box {
+  height: 150px;
+  position: relative;
   margin: auto;
   text-align: center;
   padding: 20px 20px 40px;
