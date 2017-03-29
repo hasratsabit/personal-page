@@ -1497,11 +1497,11 @@ textarea:focus {
 /*Do not make any change in this file. It is generated automatically.*/
 
 .icon {
-        background-image: url('/assets/images/sprites/sprite-552a7e12.svg');
+        background-image: url('../../assets/images/sprites/sprite-552a7e12.svg');
       }
 
 .no-svg .icon {
-        background-image: url('/assets/images/sprites/sprite-552a7e12.png');
+        background-image: url('../../assets/images/sprites/sprite-552a7e12.png');
       }
 
 .icon--angular {
