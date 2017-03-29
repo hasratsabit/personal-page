@@ -1426,11 +1426,14 @@ textarea:focus {
   position: relative;
   height: 520px;
   margin-top: 50px;
-      background-image: url("../../assets/images/header-bg-image.jpg");
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
 
+}
+
+.footer-section.lazyloaded {
+  background-image: url("../../assets/images/header-bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 @media screen and (min-width: 800px) {

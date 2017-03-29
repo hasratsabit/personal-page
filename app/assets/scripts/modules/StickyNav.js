@@ -4,6 +4,7 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class StickyNav {
   constructor() {
+    this.lazyImages = $('.lazyload');
     this.primaryNav = $('.primary-nav');
     this.primaryNavDarkTrigger = $('.site-header__header-content');
     this.pageSections = $('.page-sections');
@@ -11,9 +12,15 @@ class StickyNav {
     this.createWayNavWaypoint();
     this.currentPageSectionWaypoint();
     this.addSmoothScroll();
+    this.refereshWaypoints();
   }
 
-
+  // This solves the offset problem caused by lazyload
+  refereshWaypoints() {
+    this.lazyImages.on('load', function() {
+      Waypoint.refreshAll();
+    });
+  }
   // Changes the background color.
   createWayNavWaypoint() {
     let that = this;
