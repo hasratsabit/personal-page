@@ -22,7 +22,7 @@ class RevealModule {
         handler: function() {
           setTimeout(function() {
             $(currentItem).addClass("reveal-item--is-visible");
-          }, 200 * (i+1));
+          }, 100 * (i+1));
         },
         offset: that.offsetPercentage
       });

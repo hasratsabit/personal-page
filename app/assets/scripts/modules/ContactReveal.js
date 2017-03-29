@@ -16,7 +16,7 @@ class ContactReveal {
         handler: function() {
           setTimeout(function() {
             $(currentItem).addClass("input-group--is-visible");
-          }, 200 * (i+1));
+          }, 100 * (i+1));
         },
         offset: "80%"
       });

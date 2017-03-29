@@ -53,6 +53,10 @@
         padding-left: 10px;
       }
     }
+
+    &:last-child:hover {
+      background-color: transparent;
+    }
     @mixin atMedium {
       display: inline;
       margin-right: 10px;

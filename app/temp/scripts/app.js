@@ -11191,7 +11191,7 @@ var ContactReveal = function () {
           handler: function handler() {
             setTimeout(function () {
               (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
-            }, 200 * (i + 1));
+            }, 100 * (i + 1));
           },
           offset: "80%"
         });
@@ -11443,7 +11443,7 @@ var RevealModule = function () {
           handler: function handler() {
             setTimeout(function () {
               (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
-            }, 200 * (i + 1));
+            }, 100 * (i + 1));
           },
           offset: that.offsetPercentage
         });
