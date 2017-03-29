@@ -11130,9 +11130,7 @@ var ContactReveal = function () {
         new Waypoint({
           element: currentItem,
           handler: function handler() {
-            setTimeout(function (i) {
-              (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
-            }, 100 * (i + 1));
+            (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
           },
           offset: "80%"
         });
