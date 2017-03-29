@@ -15,14 +15,14 @@ class RevealModule {
   }
   createWayPoints(i) {
     let that = this;
-    this.itemsToReveal.each(function() {
+    this.itemsToReveal.each(function(i) {
       var currentItem = this;
       new Waypoint({
         element: currentItem,
         handler: function() {
-          setTimeout(function(i) {
+          setTimeout(function() {
             $(currentItem).addClass("reveal-item--is-visible");
-          }, 100 * (i+1));
+          }, 200 * (i+1));
         },
         offset: that.offsetPercentage
       });

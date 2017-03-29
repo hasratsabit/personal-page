@@ -14,9 +14,9 @@ class ContactReveal {
       new Waypoint({
         element: currentItem,
         handler: function() {
-          setTimeout(function(i) {
+          setTimeout(function() {
             $(currentItem).addClass("input-group--is-visible");
-          }, 100 * (i+1));
+          }, 200 * (i+1));
         },
         offset: "80%"
       });
