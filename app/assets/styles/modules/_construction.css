@@ -1,0 +1,82 @@
+.construction {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 300ms ease-in-out;
+
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__container {
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+    top: 100px;
+    left: -17px;
+    background-color: #FFF;
+    text-align: center;
+    padding: 40px 20px;
+
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+    transition: all 300ms ease-out;
+
+    &--is-expanded {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+
+    @mixin atSmall {
+      left: 186px;
+    }
+
+    @mixin atMedium {
+      top: 210px;
+      left: 335px;
+    }
+
+    @mixin atLarge {
+      top: 300px;
+      left: 505px;
+    }
+  }
+
+  h1 {
+    font-weight: 100;
+    font-size: 1.2rem;
+    @mixin atSmall {
+      font-size: 1.8rem;
+    }
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: red;
+    font-size: 1rem;
+    color: #FFF;
+    opacity: 0.7;
+    text-align: center;
+    font-weight: 100;
+    cursor: pointer;
+  }
+}

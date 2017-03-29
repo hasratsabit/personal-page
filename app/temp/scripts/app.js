@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11106,6 +11106,65 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ConstructionOverlay = function () {
+  function ConstructionOverlay() {
+    _classCallCheck(this, ConstructionOverlay);
+
+    this.Construction = (0, _jquery2.default)('.construction');
+    this.ConstructionContainer = (0, _jquery2.default)('.construction__container');
+    this.ConstructionCloseBtn = (0, _jquery2.default)('.construction__close');
+    this.ConstructionOpenBtn = (0, _jquery2.default)('.construction-open-btn');
+    this.events();
+  }
+
+  _createClass(ConstructionOverlay, [{
+    key: 'events',
+    value: function events() {
+      this.ConstructionOpenBtn.click(this.openConstructionOverlay.bind(this));
+      this.ConstructionCloseBtn.click(this.closeConstructionOverlay.bind(this));
+    }
+  }, {
+    key: 'openConstructionOverlay',
+    value: function openConstructionOverlay() {
+      console.log("workds");
+      this.Construction.addClass('construction--is-visible');
+      this.ConstructionContainer.addClass('construction__container--is-expanded');
+      return false;
+    }
+  }, {
+    key: 'closeConstructionOverlay',
+    value: function closeConstructionOverlay() {
+      this.Construction.removeClass('construction--is-visible');
+      this.ConstructionContainer.removeClass('construction__container--is-expanded');
+    }
+  }]);
+
+  return ConstructionOverlay;
+}();
+
+exports.default = ConstructionOverlay;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
@@ -11146,7 +11205,7 @@ var ContactReveal = function () {
 exports.default = ContactReveal;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11192,7 +11251,7 @@ var HeaderReveal = function () {
 exports.default = HeaderReveal;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11242,7 +11301,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11334,7 +11393,7 @@ var Overlay = function () {
 exports.default = Overlay;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11398,7 +11457,7 @@ var RevealModule = function () {
 exports.default = RevealModule;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11414,7 +11473,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(11);
+var _jquerySmoothScroll = __webpack_require__(12);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11519,10 +11578,10 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11870,7 +11929,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11880,29 +11939,33 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _MobileMenu = __webpack_require__(4);
+var _MobileMenu = __webpack_require__(5);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyNav = __webpack_require__(7);
+var _StickyNav = __webpack_require__(8);
 
 var _StickyNav2 = _interopRequireDefault(_StickyNav);
 
-var _RevealModule = __webpack_require__(6);
+var _RevealModule = __webpack_require__(7);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
 
-var _Overlay = __webpack_require__(5);
+var _Overlay = __webpack_require__(6);
 
 var _Overlay2 = _interopRequireDefault(_Overlay);
 
-var _HeaderReveal = __webpack_require__(3);
+var _HeaderReveal = __webpack_require__(4);
 
 var _HeaderReveal2 = _interopRequireDefault(_HeaderReveal);
 
-var _ContactReveal = __webpack_require__(2);
+var _ContactReveal = __webpack_require__(3);
 
 var _ContactReveal2 = _interopRequireDefault(_ContactReveal);
+
+var _ConstructionOverlay = __webpack_require__(2);
+
+var _ConstructionOverlay2 = _interopRequireDefault(_ConstructionOverlay);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11911,6 +11974,7 @@ var stickyNav = new _StickyNav2.default();
 var overlay = new _Overlay2.default();
 var headerReveal = new _HeaderReveal2.default();
 var contactReveal = new _ContactReveal2.default();
+var constructorOverlay = new _ConstructionOverlay2.default();
 
 new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%");
 new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%");
