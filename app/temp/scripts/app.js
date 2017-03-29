@@ -11130,7 +11130,9 @@ var ContactReveal = function () {
         new Waypoint({
           element: currentItem,
           handler: function handler() {
-            (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
+            setTimeout(function (i) {
+              (0, _jquery2.default)(currentItem).addClass("input-group--is-visible");
+            }, 100 * (i + 1));
           },
           offset: "80%"
         });
@@ -11373,14 +11375,16 @@ var RevealModule = function () {
     }
   }, {
     key: "createWayPoints",
-    value: function createWayPoints() {
+    value: function createWayPoints(i) {
       var that = this;
       this.itemsToReveal.each(function () {
         var currentItem = this;
         new Waypoint({
           element: currentItem,
           handler: function handler() {
-            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+            setTimeout(function (i) {
+              (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+            }, 100 * (i + 1));
           },
           offset: that.offsetPercentage
         });
