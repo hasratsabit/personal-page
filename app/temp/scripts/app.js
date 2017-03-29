@@ -11476,7 +11476,7 @@ var StickyNav = function () {
   _createClass(StickyNav, [{
     key: "refreshWaypoints",
     value: function refreshWaypoints() {
-      this.lazyImages.on(function () {
+      this.lazyImages.on('load', function () {
         Waypoint.refreshAll();
       });
     }

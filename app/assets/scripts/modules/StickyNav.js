@@ -17,7 +17,7 @@ class StickyNav {
 
   // This is for the premature content load caused by lazyload
   refreshWaypoints() {
-    this.lazyImages.on(function() {
+    this.lazyImages.on('load', function() {
       Waypoint.refreshAll();
     });
   }
