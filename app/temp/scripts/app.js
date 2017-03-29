@@ -11162,10 +11162,6 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(1);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11182,7 +11178,7 @@ var HeaderReveal = function () {
   }
 
   _createClass(HeaderReveal, [{
-    key: "createHeaderWaypoint",
+    key: 'createHeaderWaypoint',
     value: function createHeaderWaypoint() {
       this.roundImage.addClass('site-header__round-image--dropdown');
       this.headerTitle.addClass('site-header__title--slide-in');
@@ -11381,14 +11377,12 @@ var RevealModule = function () {
     key: "createWayPoints",
     value: function createWayPoints() {
       var that = this;
-      this.itemsToReveal.each(function (i) {
+      this.itemsToReveal.each(function () {
         var currentItem = this;
         new Waypoint({
           element: currentItem,
           handler: function handler() {
-            setTimeout(function (i) {
-              (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
-            }, 180 * (i + 1));
+            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
           },
           offset: that.offsetPercentage
         });
