@@ -11459,7 +11459,6 @@ var StickyNav = function () {
   function StickyNav() {
     _classCallCheck(this, StickyNav);
 
-    this.lazyImages = (0, _jquery2.default)('.lazyload');
     this.primaryNav = (0, _jquery2.default)('.primary-nav');
     this.primaryNavDarkTrigger = (0, _jquery2.default)('.site-header__header-content');
     this.pageSections = (0, _jquery2.default)('.page-sections');
@@ -11467,23 +11466,12 @@ var StickyNav = function () {
     this.createWayNavWaypoint();
     this.currentPageSectionWaypoint();
     this.addSmoothScroll();
-    this.refreshWaypoints();
   }
 
-  // This is for the premature content load caused by lazyload
+  // Changes the background color.
 
 
   _createClass(StickyNav, [{
-    key: "refreshWaypoints",
-    value: function refreshWaypoints() {
-      this.lazyImages.on('load', function () {
-        Waypoint.refreshAll();
-      });
-    }
-
-    // Changes the background color.
-
-  }, {
     key: "createWayNavWaypoint",
     value: function createWayNavWaypoint() {
       var that = this;
