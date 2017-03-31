@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11110,6 +11110,98 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Authentication = function () {
+  function Authentication() {
+    _classCallCheck(this, Authentication);
+
+    this.Model = (0, _jquery2.default)('.model');
+    this.modelContainer = (0, _jquery2.default)('.model__container');
+    this.openModelBtn = (0, _jquery2.default)('.btn__login');
+    this.closeModelBtn = (0, _jquery2.default)('.model__close');
+    this.login = (0, _jquery2.default)('.authentication__login');
+    this.signup = (0, _jquery2.default)('.authentication__signup');
+    this.loginBtn = (0, _jquery2.default)('.btn--login');
+    this.signupBtn = (0, _jquery2.default)('.btn--signup');
+    this.eventsHandler();
+  }
+
+  _createClass(Authentication, [{
+    key: 'eventsHandler',
+    value: function eventsHandler() {
+      this.openModelBtn.click(this.openModel.bind(this));
+      this.closeModelBtn.click(this.closeModel.bind(this));
+      (0, _jquery2.default)(document).keyup(this.keyPress.bind(this));
+
+      this.loginBtn.click(this.loginIsOpen.bind(this));
+      this.signupBtn.click(this.signupIsOpen.bind(this));
+    }
+
+    // Close the overaly with esc key
+
+  }, {
+    key: 'keyPress',
+    value: function keyPress(e) {
+      if (e.keyCode == 27) {
+        this.closeModel();
+      }
+    }
+  }, {
+    key: 'openModel',
+    value: function openModel() {
+      this.Model.addClass("model--is-visible");
+      this.modelContainer.addClass('model__container--is-expanded');
+      return false;
+    }
+  }, {
+    key: 'closeModel',
+    value: function closeModel() {
+      this.Model.removeClass('model--is-visible');
+      this.modelContainer.removeClass('model__container--is-expanded');
+    }
+  }, {
+    key: 'loginIsOpen',
+    value: function loginIsOpen() {
+      this.signup.removeClass('authentication__signup--is-open');
+      this.login.removeClass('authentication__login--is-closed');
+      this.loginBtn.removeClass('btn--login--not-active');
+      this.signupBtn.removeClass('btn--signup--active');
+    }
+  }, {
+    key: 'signupIsOpen',
+    value: function signupIsOpen() {
+      this.login.addClass('authentication__login--is-closed');
+      this.signup.addClass('authentication__signup--is-open');
+      this.signupBtn.addClass('btn--signup--active');
+      this.loginBtn.addClass('btn--login--not-active');
+    }
+  }]);
+
+  return Authentication;
+}();
+
+exports.default = Authentication;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var ConstructionOverlay = function () {
   function ConstructionOverlay() {
     _classCallCheck(this, ConstructionOverlay);
@@ -11149,7 +11241,7 @@ var ConstructionOverlay = function () {
 exports.default = ConstructionOverlay;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11205,7 +11297,7 @@ var ContactReveal = function () {
 exports.default = ContactReveal;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11251,7 +11343,7 @@ var HeaderReveal = function () {
 exports.default = HeaderReveal;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11301,7 +11393,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11311,8 +11403,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11321,79 +11411,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Overlay = function () {
-  function Overlay() {
-    _classCallCheck(this, Overlay);
+var ResumeModel = function ResumeModel() {
+  _classCallCheck(this, ResumeModel);
 
-    this.Model = (0, _jquery2.default)('.model');
-    this.modelContainer = (0, _jquery2.default)('.model__container');
-    this.openModelBtn = (0, _jquery2.default)('.btn__login');
-    this.closeModelBtn = (0, _jquery2.default)('.model__close');
-    this.login = (0, _jquery2.default)('.model__login');
-    this.signup = (0, _jquery2.default)('.model__signup');
-    this.loginBtn = (0, _jquery2.default)('.btn--login');
-    this.signupBtn = (0, _jquery2.default)('.btn--signup');
-    this.eventsHandler();
-  }
+  this.openModelBtn = (0, _jquery2.default)('.btn__header-btn');
+};
 
-  _createClass(Overlay, [{
-    key: 'eventsHandler',
-    value: function eventsHandler() {
-      this.openModelBtn.click(this.openModel.bind(this));
-      this.closeModelBtn.click(this.closeModel.bind(this));
-      (0, _jquery2.default)(document).keyup(this.keyPress.bind(this));
-
-      this.loginBtn.click(this.loginIsOpen.bind(this));
-      this.signupBtn.click(this.signupIsOpen.bind(this));
-    }
-
-    // Close the overaly with esc key
-
-  }, {
-    key: 'keyPress',
-    value: function keyPress(e) {
-      if (e.keyCode == 27) {
-        this.closeModel();
-      }
-    }
-  }, {
-    key: 'openModel',
-    value: function openModel() {
-      this.Model.addClass("model--is-visible");
-      this.modelContainer.addClass('model__container--is-expanded');
-      return false;
-    }
-  }, {
-    key: 'closeModel',
-    value: function closeModel() {
-      this.Model.removeClass('model--is-visible');
-      this.modelContainer.removeClass('model__container--is-expanded');
-    }
-  }, {
-    key: 'loginIsOpen',
-    value: function loginIsOpen() {
-      this.signup.removeClass('model__signup--is-open');
-      this.login.removeClass('model__login--is-closed');
-      this.loginBtn.removeClass('btn--login--not-active');
-      this.signupBtn.removeClass('btn--signup--active');
-    }
-  }, {
-    key: 'signupIsOpen',
-    value: function signupIsOpen() {
-      this.login.addClass('model__login--is-closed');
-      this.signup.addClass('model__signup--is-open');
-      this.signupBtn.addClass('btn--signup--active');
-      this.loginBtn.addClass('btn--login--not-active');
-    }
-  }]);
-
-  return Overlay;
-}();
-
-exports.default = Overlay;
+exports.default = ResumeModel;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11457,7 +11484,7 @@ var RevealModule = function () {
 exports.default = RevealModule;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11473,7 +11500,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(12);
+var _jquerySmoothScroll = __webpack_require__(13);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11578,10 +11605,10 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11929,7 +11956,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11939,42 +11966,47 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _MobileMenu = __webpack_require__(5);
+var _MobileMenu = __webpack_require__(6);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyNav = __webpack_require__(8);
+var _StickyNav = __webpack_require__(9);
 
 var _StickyNav2 = _interopRequireDefault(_StickyNav);
 
-var _RevealModule = __webpack_require__(7);
+var _RevealModule = __webpack_require__(8);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
 
-var _Overlay = __webpack_require__(6);
+var _Authentication = __webpack_require__(2);
 
-var _Overlay2 = _interopRequireDefault(_Overlay);
+var _Authentication2 = _interopRequireDefault(_Authentication);
 
-var _HeaderReveal = __webpack_require__(4);
+var _HeaderReveal = __webpack_require__(5);
 
 var _HeaderReveal2 = _interopRequireDefault(_HeaderReveal);
 
-var _ContactReveal = __webpack_require__(3);
+var _ContactReveal = __webpack_require__(4);
 
 var _ContactReveal2 = _interopRequireDefault(_ContactReveal);
 
-var _ConstructionOverlay = __webpack_require__(2);
+var _ConstructionOverlay = __webpack_require__(3);
 
 var _ConstructionOverlay2 = _interopRequireDefault(_ConstructionOverlay);
+
+var _ResumeModel = __webpack_require__(7);
+
+var _ResumeModel2 = _interopRequireDefault(_ResumeModel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 var stickyNav = new _StickyNav2.default();
-var overlay = new _Overlay2.default();
+var authentication = new _Authentication2.default();
 var headerReveal = new _HeaderReveal2.default();
 var contactReveal = new _ContactReveal2.default();
 var constructorOverlay = new _ConstructionOverlay2.default();
+var resumeModel = new _ResumeModel2.default();
 
 new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%");
 new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%");

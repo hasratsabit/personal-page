@@ -1,13 +1,13 @@
 import $ from "jquery";
 
-class Overlay {
+class Authentication {
   constructor() {
     this.Model = $('.model');
     this.modelContainer = $('.model__container');
     this.openModelBtn = $('.btn__login');
     this.closeModelBtn = $('.model__close');
-    this.login = $('.model__login');
-    this.signup = $('.model__signup');
+    this.login = $('.authentication__login');
+    this.signup = $('.authentication__signup');
     this.loginBtn = $('.btn--login');
     this.signupBtn = $('.btn--signup');
     this.eventsHandler();
@@ -41,18 +41,18 @@ class Overlay {
   }
 
   loginIsOpen() {
-    this.signup.removeClass('model__signup--is-open');
-    this.login.removeClass('model__login--is-closed');
+    this.signup.removeClass('authentication__signup--is-open');
+    this.login.removeClass('authentication__login--is-closed');
     this.loginBtn.removeClass('btn--login--not-active');
     this.signupBtn.removeClass('btn--signup--active');
   }
 
   signupIsOpen() {
-    this.login.addClass('model__login--is-closed');
-    this.signup.addClass('model__signup--is-open');
+    this.login.addClass('authentication__login--is-closed');
+    this.signup.addClass('authentication__signup--is-open');
     this.signupBtn.addClass('btn--signup--active');
     this.loginBtn.addClass('btn--login--not-active');
   }
 }
 
-export default Overlay;
+export default Authentication;

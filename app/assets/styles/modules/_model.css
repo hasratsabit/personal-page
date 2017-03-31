@@ -1,0 +1,89 @@
+.model {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 300ms ease-in-out;
+
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  &__close {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba($white, 0.5);
+    font-size: 1rem;
+    color: #FFF;
+    opacity: 0.7;
+    top: 60px;
+    right: 30px;
+    text-align: center;
+    font-weight: 100;
+    cursor: pointer;
+
+    @mixin atSmall {
+      padding: 5px 5px 7px;
+      font-size: 1.5rem;
+      top: 6%;
+      right: 29%;
+    }
+
+    @mixin atMedium {
+      top: 9.5%;
+      right: 31.5%;
+    }
+
+    @mixin atLarge {
+      top: 16%;
+      right: 33.6%;
+    }
+  }
+
+  &__container {
+    position: relative;
+    top: 100px;
+    background-color: #FFF;
+
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+    transition: all 300ms ease-out;
+
+    &--is-expanded {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+
+    @mixin atSmall {
+      left: 186px;
+    }
+
+    @mixin atMedium {
+      top: 110px;
+      left: 335px;
+    }
+
+    @mixin atLarge {
+      top: 200px;
+      left: 505px;
+    }
+  }
+
+  &__navbar {
+    position: relative;
+  }
+
+}

@@ -557,8 +557,8 @@ img {
 }
 
 .site-header__header-content {
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
   text-align: center;
   color: #FFF;
 }
@@ -566,8 +566,8 @@ img {
 @media screen and (min-width: 800px) {
 
   .site-header__header-content {
-    -webkit-transform: translateY(70%);
-            transform: translateY(70%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
 }
 
@@ -645,6 +645,10 @@ img {
   .site-header__description {
     font-size: 1.5rem;
   }
+}
+
+.site-header__btn {
+  margin-top: 20px;
 }
 
 .header-bubbles {
@@ -1132,27 +1136,22 @@ img {
 
 }
 
-.btn i {
-  margin-left: 5px;
-}
-
-.btn--large-white {
-  position: relative;
-  font-weight: 200;
-  padding: 12px 25px;
-  font-size: 0.6rem;
-  border-radius: 20px;
-  border: 1px solid;
-}
-
-.btn--white {
-  border-color: #FFF;
+.btn--orange {
+  background-color: #FFA500;
   color: #FFF;
 }
 
-.btn--white:hover {
-  background-color: #FFF;
-  color: #51B2A8;
+.btn__header-btn {
+  padding: 11px 15px;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+
+  .btn__header-btn {
+    padding: 14px 30px;
+  }
 }
 
 .btn--large {
@@ -2038,7 +2037,7 @@ textarea:focus {
   position: relative;
 }
 
-.model__authentication {
+.authentication {
   text-align: center;
   padding: 40px 20px 20px;
 }
@@ -2047,12 +2046,12 @@ textarea:focus {
 
 @media screen and (min-width: 800px) {
 
-  .model__authentication {
+  .authentication {
     padding: 50px 30px 30px;
   }
 }
 
-.model__login {
+.authentication__login {
   opacity: 1;
   height: auto;
   -webkit-transform: translateX(0);
@@ -2061,7 +2060,7 @@ textarea:focus {
   transition: all 300ms ease-in-out;
 }
 
-.model__login--is-closed {
+.authentication__login--is-closed {
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -2069,7 +2068,7 @@ textarea:focus {
           transform: translateX(-20px);
 }
 
-.model__signup {
+.authentication__signup {
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -2079,14 +2078,14 @@ textarea:focus {
   transition: all 300ms ease-in-out;
 }
 
-.model__signup--is-open {
+.authentication__signup--is-open {
   opacity: 1;
   height: auto;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.model__title {
+.authentication__title {
   padding: 40px 0 20px;
   text-transform: uppercase;
   font-size: 1rem;
@@ -2095,13 +2094,13 @@ textarea:focus {
 
 @media screen and (min-width: 800px) {
 
-  .model__title {
+  .authentication__title {
     padding: 50px 0 20px;
     font-size: 1.5rem;
   }
 }
 
-.model__seperator {
+.authentication__seperator {
   position: relative;
   text-transform: uppercase;
   font-weight: 100;
@@ -2110,12 +2109,12 @@ textarea:focus {
 
 @media screen and (min-width: 800px) {
 
-  .model__seperator {
+  .authentication__seperator {
     padding: 40px 0 40px;
   }
 }
 
-.model__seperator::after {
+.authentication__seperator::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2125,7 +2124,7 @@ textarea:focus {
   background-color: #7fcce5;
 }
 
-.model__seperator::before {
+.authentication__seperator::before {
   content: "";
   position: absolute;
   right: 0;
@@ -2135,11 +2134,11 @@ textarea:focus {
   background-color: #7fcce5;
 }
 
-.model .input-group {
+.authentication .input-group {
   margin-bottom: 20px;
 }
 
-.model .input-group:last-child {
+.authentication .input-group:last-child {
   margin-bottom: 0;
 }
 

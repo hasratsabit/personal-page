@@ -35,12 +35,11 @@
   }
 
   &__header-content {
-    transform: translateY(50%);
+    transform: translateY(30%);
     text-align: center;
     color: #FFF;
-
     @mixin atMedium {
-      transform: translateY(70%);
+      transform: translateY(50%);
     }
   }
 
@@ -98,5 +97,9 @@
     @mixin atMedium {
       font-size: 1.5rem;
     }
+  }
+
+  &__btn {
+    margin-top: 20px;
   }
 }
