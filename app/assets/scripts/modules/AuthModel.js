@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-class Authentication {
+class AuthModel {
   constructor() {
     this.Model = $('.model');
     this.modelContainer = $('.model__container');
@@ -55,4 +55,4 @@ class Authentication {
   }
 }
 
-export default Authentication;
+export default AuthModel;

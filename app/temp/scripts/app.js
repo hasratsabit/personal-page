@@ -11110,9 +11110,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Authentication = function () {
-  function Authentication() {
-    _classCallCheck(this, Authentication);
+var AuthModel = function () {
+  function AuthModel() {
+    _classCallCheck(this, AuthModel);
 
     this.Model = (0, _jquery2.default)('.model');
     this.modelContainer = (0, _jquery2.default)('.model__container');
@@ -11125,7 +11125,7 @@ var Authentication = function () {
     this.eventsHandler();
   }
 
-  _createClass(Authentication, [{
+  _createClass(AuthModel, [{
     key: 'eventsHandler',
     value: function eventsHandler() {
       this.openModelBtn.click(this.openModel.bind(this));
@@ -11176,10 +11176,10 @@ var Authentication = function () {
     }
   }]);
 
-  return Authentication;
+  return AuthModel;
 }();
 
-exports.default = Authentication;
+exports.default = AuthModel;
 
 /***/ }),
 /* 3 */
@@ -11978,9 +11978,9 @@ var _RevealModule = __webpack_require__(8);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
 
-var _Authentication = __webpack_require__(2);
+var _AuthModel = __webpack_require__(2);
 
-var _Authentication2 = _interopRequireDefault(_Authentication);
+var _AuthModel2 = _interopRequireDefault(_AuthModel);
 
 var _HeaderReveal = __webpack_require__(5);
 
@@ -12002,7 +12002,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mobileMenu = new _MobileMenu2.default();
 var stickyNav = new _StickyNav2.default();
-var authentication = new _Authentication2.default();
+var authModel = new _AuthModel2.default();
 var headerReveal = new _HeaderReveal2.default();
 var contactReveal = new _ContactReveal2.default();
 var constructorOverlay = new _ConstructionOverlay2.default();

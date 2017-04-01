@@ -19,7 +19,6 @@
 @import "modules/_primary-nav";
 @import "modules/_mobile-menu-icon";
 @import "modules/_reveal-items";
-@import "modules/_model";
-@import "modules/_authentication.css";
+@import "modules/_auth-model";
 @import "modules/_social-media";
 @import "modules/_construction";

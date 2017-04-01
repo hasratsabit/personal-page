@@ -1942,7 +1942,6 @@ textarea:focus {
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-
 }
 
 .model--is-visible {
@@ -2033,11 +2032,7 @@ textarea:focus {
   }
 }
 
-.model__navbar {
-  position: relative;
-}
-
-.authentication {
+.model .authentication {
   text-align: center;
   padding: 40px 20px 20px;
 }
@@ -2046,12 +2041,12 @@ textarea:focus {
 
 @media screen and (min-width: 800px) {
 
-  .authentication {
+  .model .authentication {
     padding: 50px 30px 30px;
   }
 }
 
-.authentication__login {
+.model .authentication__login {
   opacity: 1;
   height: auto;
   -webkit-transform: translateX(0);
@@ -2060,7 +2055,7 @@ textarea:focus {
   transition: all 300ms ease-in-out;
 }
 
-.authentication__login--is-closed {
+.model .authentication__login--is-closed {
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -2068,7 +2063,7 @@ textarea:focus {
           transform: translateX(-20px);
 }
 
-.authentication__signup {
+.model .authentication__signup {
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -2078,14 +2073,14 @@ textarea:focus {
   transition: all 300ms ease-in-out;
 }
 
-.authentication__signup--is-open {
+.model .authentication__signup--is-open {
   opacity: 1;
   height: auto;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.authentication__title {
+.model .authentication__title {
   padding: 40px 0 20px;
   text-transform: uppercase;
   font-size: 1rem;
@@ -2094,13 +2089,13 @@ textarea:focus {
 
 @media screen and (min-width: 800px) {
 
-  .authentication__title {
+  .model .authentication__title {
     padding: 50px 0 20px;
     font-size: 1.5rem;
   }
 }
 
-.authentication__seperator {
+.model .authentication__seperator {
   position: relative;
   text-transform: uppercase;
   font-weight: 100;
@@ -2109,12 +2104,12 @@ textarea:focus {
 
 @media screen and (min-width: 800px) {
 
-  .authentication__seperator {
+  .model .authentication__seperator {
     padding: 40px 0 40px;
   }
 }
 
-.authentication__seperator::after {
+.model .authentication__seperator::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2124,7 +2119,7 @@ textarea:focus {
   background-color: #7fcce5;
 }
 
-.authentication__seperator::before {
+.model .authentication__seperator::before {
   content: "";
   position: absolute;
   right: 0;
@@ -2134,11 +2129,11 @@ textarea:focus {
   background-color: #7fcce5;
 }
 
-.authentication .input-group {
+.model .authentication .input-group {
   margin-bottom: 20px;
 }
 
-.authentication .input-group:last-child {
+.model .authentication .input-group:last-child {
   margin-bottom: 0;
 }
 
