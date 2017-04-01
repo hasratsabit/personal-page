@@ -2,17 +2,12 @@ import $ from "jquery";
 
 class HeaderReveal {
   constructor() {
-    this.siteHeader = $('.site-header');
-    this.roundImage = $('.site-header__round-image');
-    this.headerTitle = $('.site-header__title');
-    this.headerDescription = $('.site-header__description');
-    this.createHeaderWaypoint();
+    this.HeaderContent = $('.site-header__header-content');
+    this.displayHeaderContent();
   }
 
-  createHeaderWaypoint() {
-    this.roundImage.addClass('site-header__round-image--dropdown');
-    this.headerTitle.addClass('site-header__title--slide-in');
-    this.headerDescription.addClass('site-header__description--slide-in');
+  displayHeaderContent() {
+    this.HeaderContent.addClass('site-header__header-content--is-visible');
   }
 }
 

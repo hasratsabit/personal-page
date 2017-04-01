@@ -11321,19 +11321,14 @@ var HeaderReveal = function () {
   function HeaderReveal() {
     _classCallCheck(this, HeaderReveal);
 
-    this.siteHeader = (0, _jquery2.default)('.site-header');
-    this.roundImage = (0, _jquery2.default)('.site-header__round-image');
-    this.headerTitle = (0, _jquery2.default)('.site-header__title');
-    this.headerDescription = (0, _jquery2.default)('.site-header__description');
-    this.createHeaderWaypoint();
+    this.HeaderContent = (0, _jquery2.default)('.site-header__header-content');
+    this.displayHeaderContent();
   }
 
   _createClass(HeaderReveal, [{
-    key: 'createHeaderWaypoint',
-    value: function createHeaderWaypoint() {
-      this.roundImage.addClass('site-header__round-image--dropdown');
-      this.headerTitle.addClass('site-header__title--slide-in');
-      this.headerDescription.addClass('site-header__description--slide-in');
+    key: 'displayHeaderContent',
+    value: function displayHeaderContent() {
+      this.HeaderContent.addClass('site-header__header-content--is-visible');
     }
   }]);
 
