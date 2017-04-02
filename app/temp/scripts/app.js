@@ -11469,25 +11469,47 @@ exports.default = MobileMenu;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var resumeModel = function resumeModel() {
 
-var ResumeModel = function ResumeModel() {
-  _classCallCheck(this, ResumeModel);
+  var ResumeModel = (0, _jquery2.default)('.resume-model');
+  var ResumeModelContainer = (0, _jquery2.default)('.resume-model__container');
+  var HeaderButton = (0, _jquery2.default)('.site-header__btn');
+  var CloseButton = (0, _jquery2.default)('.resume-model__close');
 
-  this.openModelBtn = (0, _jquery2.default)('.btn__header-btn');
+  // Event Handler
+  var eventHandler = function eventHandler() {
+    //Header Button
+    HeaderButton.on('click', function () {
+      openResumeModel();
+    });
+    // Close Button
+    CloseButton.on('click', function () {
+      closeResumeModel();
+    });
+  };
+
+  // Open Resume Model
+  var openResumeModel = function openResumeModel() {
+    ResumeModel.addClass('resume-model--is-visible');
+    ResumeModelContainer.addClass('resume-model__container--is-expanded');
+  };
+
+  // Close Resume Model
+  var closeResumeModel = function closeResumeModel() {
+    ResumeModel.removeClass('resume-model--is-visible');
+    ResumeModelContainer.removeClass('resume-model__container--is-expanded');
+  };
+
+  eventHandler();
 };
 
-exports.default = ResumeModel;
+resumeModel();
 
 /***/ }),
 /* 9 */
@@ -12064,13 +12086,9 @@ var _ConstructionOverlay = __webpack_require__(3);
 
 var _ConstructionOverlay2 = _interopRequireDefault(_ConstructionOverlay);
 
-var _ResumeModel = __webpack_require__(8);
+__webpack_require__(8);
 
-var _ResumeModel2 = _interopRequireDefault(_ResumeModel);
-
-var _ImageSlider = __webpack_require__(6);
-
-var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
+__webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12080,7 +12098,6 @@ var authModel = new _AuthModel2.default();
 var headerReveal = new _HeaderReveal2.default();
 var contactReveal = new _ContactReveal2.default();
 var constructorOverlay = new _ConstructionOverlay2.default();
-var resumeModel = new _ResumeModel2.default();
 
 new _RevealModule2.default((0, _jquery2.default)(".proj-box"), "65%");
 new _RevealModule2.default((0, _jquery2.default)(".skills-box"), "80%");
