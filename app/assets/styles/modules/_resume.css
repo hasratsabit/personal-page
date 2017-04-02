@@ -1,0 +1,72 @@
+.resume {
+  height: 500px;
+  color: rgba(#FFF, 0.7);
+  background-image: url(../../assets/images/mountain.jpg);
+
+
+
+  &__title {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 200px;
+  }
+
+  &__generic-content {
+    float: right;
+    padding: 20px;
+    font-weight: 100;
+  }
+
+    /*Personal Info*/
+  &__info {
+    padding: 20px;
+    color: #FFF;
+    text-align: center;
+
+    h1 {
+      margin-top: 30%;
+      font-size: 3rem;
+      font-weight: 100;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-top: 10px;
+    }
+  }
+
+  &__skills {
+    padding: 0 20px;
+
+    ul {
+      margin: 25px 0;
+    }
+    li {
+      font-size: 1.1rem;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+.content{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 800ms ease-in-out;
+  &--active{
+      z-index: 100;
+      opacity: 1;
+  }
+}
+.slide-1 {background-color: rgba(#b1ac3f, 0.8)}
+.slide-2 {background-color: rgba(#d95a3d, 0.8)}
+.slide-3 {background-color: rgba(#7acc7a, 0.8)}
+.slide-4 {background-color: rgba(#8a71a5, 0.8)}

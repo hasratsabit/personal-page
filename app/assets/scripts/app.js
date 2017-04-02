@@ -8,7 +8,7 @@ import HeaderReveal from "./modules/HeaderReveal";
 import ContactReveal from "./modules/ContactReveal";
 import ConstructionOverlay from "./modules/ConstructionOverlay";
 import ResumeModel from "./modules/ResumeModel";
-
+import ImageSlider from "./modules/ImageSlider";
 
 var mobileMenu = new MobileMenu();
 var stickyNav = new StickyNav();

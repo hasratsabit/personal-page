@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11344,6 +11344,81 @@ exports.default = HeaderReveal;
 "use strict";
 
 
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var imageSlider = function () {
+  var NextButton = (0, _jquery2.default)('.next-slide');
+  var PrevButton = (0, _jquery2.default)('.prev-slide');
+
+  var eventHandlers = function eventHandlers() {
+    NextButton.on('click', function () {
+      showNextSlide();
+    });
+
+    PrevButton.on('click', function () {
+      showPrevSlide();
+    });
+  };
+
+  var showNextSlide = function showNextSlide() {
+    var CurrentSlide = (0, _jquery2.default)('.content--active');
+    var NextSlide = CurrentSlide.next();
+    if (NextSlide.length) {
+      NextSlide.addClass('content--active');
+      CurrentSlide.removeClass('content--active');
+    }
+  };
+
+  var showPrevSlide = function showPrevSlide() {
+    var CurrentSlide = (0, _jquery2.default)('.content--active');
+    var PrevSlide = CurrentSlide.prev();
+
+    if (PrevSlide.length) {
+      PrevSlide.addClass('content--active');
+      CurrentSlide.removeClass('content--active');
+    }
+  };
+
+  eventHandlers();
+}();
+
+// function imageSlide() {
+//   $('.next-slide').on('click', function() {
+//     const CurrentSlide = $('.content--active');
+//     let NextSlide = CurrentSlide.next();
+//
+//     if(NextSlide.length) {
+//       CurrentSlide.removeClass('content--active');
+//       NextSlide.addClass('content--active');
+//     }
+//
+//     $('.prev-slide').on('click', function() {
+//       let CurrentSlide = $('.content--active');
+//       let PrevSlide = CurrentSlide.prev();
+//
+//       if(PrevSlide.length) {
+//         CurrentSlide.removeClass('content--active');
+//         PrevSlide.addClass('content--active');
+//       }
+//     })
+//   })
+//
+//
+// }
+//
+// imageSlide();
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -11388,7 +11463,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11415,7 +11490,7 @@ var ResumeModel = function ResumeModel() {
 exports.default = ResumeModel;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11479,7 +11554,7 @@ var RevealModule = function () {
 exports.default = RevealModule;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11495,7 +11570,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(13);
+var _jquerySmoothScroll = __webpack_require__(14);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11600,10 +11675,10 @@ var StickyNav = function () {
 exports.default = StickyNav;
 
 /***/ }),
-/* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11951,7 +12026,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11961,15 +12036,15 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _MobileMenu = __webpack_require__(6);
+var _MobileMenu = __webpack_require__(7);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyNav = __webpack_require__(9);
+var _StickyNav = __webpack_require__(10);
 
 var _StickyNav2 = _interopRequireDefault(_StickyNav);
 
-var _RevealModule = __webpack_require__(8);
+var _RevealModule = __webpack_require__(9);
 
 var _RevealModule2 = _interopRequireDefault(_RevealModule);
 
@@ -11989,9 +12064,13 @@ var _ConstructionOverlay = __webpack_require__(3);
 
 var _ConstructionOverlay2 = _interopRequireDefault(_ConstructionOverlay);
 
-var _ResumeModel = __webpack_require__(7);
+var _ResumeModel = __webpack_require__(8);
 
 var _ResumeModel2 = _interopRequireDefault(_ResumeModel);
+
+var _ImageSlider = __webpack_require__(6);
+
+var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

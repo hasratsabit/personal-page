@@ -21,4 +21,6 @@
 @import "modules/_reveal-items";
 @import "modules/_auth-model";
 @import "modules/_social-media";
+@import "modules/_resume-model";
+@import "modules/_resume";
 @import "modules/_construction";
