@@ -563,8 +563,8 @@ img {
   right: 0;
   text-align: center;
   color: #FFF;
-  -webkit-transform: scale(0) rotate(90deg);
-          transform: scale(0) rotate(90deg);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
@@ -579,8 +579,8 @@ img {
 }
 
 .site-header__header-content--is-visible {
-  -webkit-transform: scale(1) rotate(0);
-          transform: scale(1) rotate(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .site-header__round-image {
@@ -1496,47 +1496,47 @@ textarea:focus {
 /*Do not make any change in this file. It is generated automatically.*/
 
 .icon {
-        background-image: url('../../assets/images/sprites/sprite-552a7e12.svg');
+        background-image: url('../../assets/images/sprites/sprite-284eb6ec.svg');
       }
 
 .no-svg .icon {
-        background-image: url('../../assets/images/sprites/sprite-552a7e12.png');
+        background-image: url('../../assets/images/sprites/sprite-284eb6ec.png');
       }
 
 .icon--angular {
       width: 52px;
       height: 52px;
-      background-position: 33.333333333333336% 0;
+      background-position: 0 0;
   }
 
 .icon--css3 {
       width: 52px;
       height: 52px;
-      background-position: 0 33.333333333333336%;
+      background-position: 60.46511627906977% 33.333333333333336%;
   }
 
 .icon--facebook {
       width: 20px;
       height: 20px;
-      background-position: 27.659574468085108% 82.97872340425532%;
+      background-position: 74.50980392156863% 93.61702127659575%;
   }
 
 .icon--git {
       width: 52px;
       height: 52px;
-      background-position: 33.333333333333336% 33.333333333333336%;
+      background-position: 30.232558139534884% 33.333333333333336%;
   }
 
 .icon--github {
       width: 52px;
       height: 52px;
-      background-position: 66.66666666666667% 0;
+      background-position: 60.46511627906977% 0;
   }
 
 .icon--google {
       width: 20px;
       height: 20px;
-      background-position: 48.93617021276596% 82.97872340425532%;
+      background-position: 74.50980392156863% 82.97872340425532%;
   }
 
 .icon--gulp {
@@ -1548,127 +1548,139 @@ textarea:focus {
 .icon--home {
       width: 16px;
       height: 16px;
-      background-position: 91.66666666666667% 81.25%;
+      background-position: 100% 0;
   }
 
 .icon--html5 {
       width: 52px;
       height: 52px;
-      background-position: 66.66666666666667% 66.66666666666667%;
+      background-position: 60.46511627906977% 66.66666666666667%;
   }
 
 .icon--javascript {
       width: 52px;
       height: 52px;
-      background-position: 100% 0;
+      background-position: 90.69767441860465% 0;
   }
 
 .icon--jquery {
       width: 52px;
       height: 52px;
-      background-position: 100% 33.333333333333336%;
+      background-position: 90.69767441860465% 33.333333333333336%;
+  }
+
+.icon--left-arrow {
+      width: 50px;
+      height: 50px;
+      background-position: 29.885057471264368% 98.73417721518987%;
   }
 
 .icon--mongodb {
       width: 52px;
       height: 52px;
-      background-position: 100% 66.66666666666667%;
+      background-position: 0 100%;
   }
 
 .icon--nodejs {
       width: 52px;
       height: 52px;
-      background-position: 33.333333333333336% 66.66666666666667%;
+      background-position: 90.69767441860465% 66.66666666666667%;
   }
 
 .icon--nodemon {
       width: 52px;
       height: 52px;
-      background-position: 66.66666666666667% 33.333333333333336%;
+      background-position: 30.232558139534884% 66.66666666666667%;
+  }
+
+.icon--right-arrow {
+      width: 50px;
+      height: 50px;
+      background-position: 58.62068965517241% 98.73417721518987%;
   }
 
 .icon--sass {
       width: 52px;
       height: 52px;
-      background-position: 0 0;
+      background-position: 0 33.333333333333336%;
   }
 
 .icon--small--arrow-small {
       width: 9px;
       height: 12px;
-      background-position: 66.33165829145729% 89.79591836734694%;
+      background-position: 96.74418604651163% 65.3061224489796%;
   }
 
 .icon--small--facebook-small {
       width: 16px;
       height: 16px;
-      background-position: 58.333333333333336% 81.25%;
+      background-position: 92.3076923076923% 81.25%;
   }
 
 .icon--small--github-small {
       width: 16px;
       height: 16px;
-      background-position: 66.66666666666667% 81.25%;
+      background-position: 82.6923076923077% 91.66666666666667%;
   }
 
 .icon--small--home-small {
       width: 16px;
       height: 16px;
-      background-position: 75% 81.25%;
+      background-position: 90.38461538461539% 91.66666666666667%;
   }
 
 .icon--small--instagram-small {
       width: 16px;
       height: 16px;
-      background-position: 83.33333333333333% 81.25%;
+      background-position: 100% 8.333333333333334%;
   }
 
 .icon--small--linkedin-small {
       width: 16px;
       height: 16px;
-      background-position: 60.416666666666664% 91.66666666666667%;
+      background-position: 100% 58.333333333333336%;
   }
 
 .icon--small--phone-small {
       width: 16px;
       height: 16px;
-      background-position: 100% 81.25%;
+      background-position: 100% 16.666666666666668%;
   }
 
 .icon--small--square-small {
       width: 16px;
       height: 16px;
-      background-position: 27.083333333333332% 91.66666666666667%;
+      background-position: 100% 25%;
   }
 
 .icon--small--twitter-small {
       width: 16px;
       height: 16px;
-      background-position: 35.416666666666664% 91.66666666666667%;
+      background-position: 100% 33.333333333333336%;
   }
 
 .icon--small--web-small {
       width: 16px;
       height: 16px;
-      background-position: 43.75% 91.66666666666667%;
+      background-position: 100% 41.666666666666664%;
   }
 
 .icon--square {
       width: 16px;
       height: 16px;
-      background-position: 52.083333333333336% 91.66666666666667%;
+      background-position: 100% 50%;
   }
 
 .icon--twitter {
       width: 20px;
       height: 20px;
-      background-position: 38.297872340425535% 82.97872340425532%;
+      background-position: 84.31372549019608% 82.97872340425532%;
   }
 
 .icon--webpack {
       width: 52px;
       height: 52px;
-      background-position: 0 100%;
+      background-position: 30.232558139534884% 0;
   }
 
 .primary-nav {
@@ -2269,8 +2281,11 @@ textarea:focus {
 .resume {
   height: 400px;
   color: rgba(255,255,255, 0.7);
-  background-image: url(../../assets/images/mountain.jpg);
 
+}
+
+.resume.lazyloaded {
+  background-image: url(../../assets/images/mountain.jpg);
 }
 
 @media screen and (min-width: 800px) {

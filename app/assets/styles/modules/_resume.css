@@ -1,7 +1,9 @@
 .resume {
   height: 400px;
   color: rgba(#FFF, 0.7);
-  background-image: url(../../assets/images/mountain.jpg);
+  &.lazyloaded {
+    background-image: url(../../assets/images/mountain.jpg);
+  }
   @mixin atMedium {
     height: 500px;
   }
