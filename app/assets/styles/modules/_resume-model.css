@@ -7,8 +7,10 @@
   height: 100%;
   width: 100%;
   z-index: 200;
-  /*opacity: 0;
-  visibility: hidden;*/
+
+  /* Animation */
+  opacity: 0;
+  visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   transition: all 300ms ease-in-out;
 
@@ -43,12 +45,12 @@
 
     @mixin atMedium {
       top: 9.5%;
-      right: 31.5%;
+      right: 26.4%;
     }
 
     @mixin atLarge {
       top: 16%;
-      right: 33.6%;
+      right: 29%;
     }
   }
 
@@ -57,8 +59,9 @@
     top: 100px;
     background-color: #FFF;
 
-    /*opacity: 0;
-    transform: translateY(100%) scale(0);*/
+    /*Aniamtion*/
+    opacity: 0;
+    transform: translateY(100%) scale(0);
     transition: all 300ms ease-out;
 
     &--is-expanded {
@@ -73,12 +76,12 @@
 
     @mixin atMedium {
       top: 110px;
-      left: 335px;
+      left: 250px;
     }
 
     @mixin atLarge {
       top: 200px;
-      left: 505px;
+      left: 380px;
     }
   }
 
@@ -86,7 +89,10 @@
     position: absolute;
     bottom: 0;
     left: 40%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     z-index: 700;
+    background-color: rgba(#000, 0.3);
     text-align: center;
   }
 }

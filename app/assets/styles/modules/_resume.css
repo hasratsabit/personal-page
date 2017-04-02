@@ -1,21 +1,73 @@
 .resume {
-  height: 500px;
+  height: 400px;
   color: rgba(#FFF, 0.7);
   background-image: url(../../assets/images/mountain.jpg);
+  @mixin atMedium {
+    height: 500px;
+  }
+  .content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    opacity: 0;
+    background-color: rgba(#d95a3d, 0.8);
+    transition: all 800ms ease-in-out;
+    &--active{
+        z-index: 100;
+        opacity: 1;
+    }
 
-
+    @mixin atMedium {
+      overflow: hidden;
+    }
+  }
 
   &__title {
-    float: left;
     text-transform: uppercase;
     font-weight: 100;
-    margin-top: 200px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5rem;
+
+    @mixin atMedium {
+      font-size: 2rem;
+      float: left;
+      margin-top: 200px;
+      text-align: left;
+    }
+
+    &--smaller-font {
+      font-size: 1.3rem;
+    }
   }
 
   &__generic-content {
-    float: right;
-    padding: 20px;
     font-weight: 100;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+
+    @mixin atMedium {
+      float: right;
+      margin-left: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+      margin-top: 10px;
+    }
+  }
+
+  &--smaller-p-width {
+    @mixin atMedium {
+      width: 50%;
+    }
+  }
+
+  &--margin-top {
+    @mixin atMedium {
+      margin-top: 200px;
+    }
   }
 
     /*Personal Info*/
@@ -26,9 +78,11 @@
 
     h1 {
       margin-top: 30%;
-      font-size: 3rem;
       font-weight: 100;
       margin-bottom: 0;
+      @mixin atMedium {
+        font-size: 3rem;
+      }
     }
 
     li {
@@ -40,33 +94,90 @@
     padding: 0 20px;
 
     ul {
-      margin: 25px 0;
+      display: inline-block;
+      margin: 0 20px 10px 0;
+      @mixin atMedium {
+        display: block;
+        margin: 25px 20px 25px 0;
+      }
     }
     li {
-      font-size: 1.1rem;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+      list-style: square;
+      @mixin atMedium {
+        font-size:1rem;
+      }
+    }
+  }
+
+  &__tools {
+    padding: 0 20px;
+
+    ul {
+      display: inline-block;
+      margin: 0 50px 20px 0;
+      @mixin atMedium {
+        display: block;
+        margin: 40px 100px 25px 0;
+      }
+
+    }
+    li {
+      list-style: square;
+      margin-top: 10px;
+      font-size: 1rem;
+      @mixin atMedium {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__experiance {
+    @mixin atMedium {
+      padding: 0 20px;
+    }
+
+    &__headlines {
+      text-align: center;
+      @mixin atMedium {
+        text-align: left;
+        float: left;
+      }
+    }
+
+    h3,
+    h4 {
+      font-weight: 100;
+    }
+
+    li {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      list-style: square;
+      @mixin atLarge {
+        margin-top: 13px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__reference {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 10px;
+      font-weight: 100;
+      margin-top: 50%;
+      @mixin atMedium {
+        margin-top: 200px;
+        font-size: 3rem;
+      }
     }
   }
 
 }
-
-
-
-
-
-
-
-.content{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: all 800ms ease-in-out;
-  &--active{
-      z-index: 100;
-      opacity: 1;
-  }
-}
-.slide-1 {background-color: rgba(#b1ac3f, 0.8)}
-.slide-2 {background-color: rgba(#d95a3d, 0.8)}
-.slide-3 {background-color: rgba(#7acc7a, 0.8)}
-.slide-4 {background-color: rgba(#8a71a5, 0.8)}

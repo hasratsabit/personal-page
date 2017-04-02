@@ -77,6 +77,12 @@
       float: left;
     }
 
+    &--resume-width-at-medium {
+      @mixin atMedium {
+        width:  60% !important;
+      }
+    }
+
     &--width-at-small {
       @mixin atSmall {
         width: 47%;
