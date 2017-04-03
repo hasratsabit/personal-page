@@ -525,7 +525,7 @@ img {
   .site-header {
     background-size: cover;
     background-position: center;
-    height: 650px;
+    height: 600px;
   }
 }
 
@@ -552,7 +552,7 @@ img {
 @media screen and (min-width: 570px) {
 
   .site-header__transparent-background {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.8);
   }
 }
 
@@ -563,15 +563,22 @@ img {
   right: 0;
   text-align: center;
   color: #FFF;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: -webkit-transform 1.5s ease-in-out;
+  transition: -webkit-transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out, -webkit-transform 1.5s ease-in-out;
 }
 
 @media screen and (min-width: 800px) {
+
+  .site-header__header-content {
+    top: 170px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
 
   .site-header__header-content {
     top: 200px;
@@ -596,6 +603,14 @@ img {
 
   .site-header__round-image {
     border: 7px solid rgba(255,255,255, 0.7);
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+
+  .site-header__round-image {
     height: 200px;
     width: 200px;
   }
@@ -2214,7 +2229,7 @@ textarea:focus {
 @media screen and (min-width: 800px) {
 
   .resume-model__close {
-    top: 9.5%;
+    top: 7%;
     right: 26.4%;
   }
 }
@@ -2254,7 +2269,7 @@ textarea:focus {
 @media screen and (min-width: 800px) {
 
   .resume-model__container {
-    top: 110px;
+    top: 80px;
     left: 250px;
   }
 }
