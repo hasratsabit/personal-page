@@ -511,20 +511,15 @@ img {
 
 .site-header {
   position: relative;
-  background-image: url("../../assets/images/header-bg-image.jpg");
-  background-position: center bottom;
-  background-attachment: fixed;
-  background-size: auto;
   width: 100%;
   height: 400px;
   overflow: hidden;
+	background-color: #212121;
 }
 
 @media screen and (min-width: 800px) {
 
   .site-header {
-    background-size: cover;
-    background-position: center;
     height: 600px;
   }
 }
@@ -546,14 +541,6 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.4);
-}
-
-@media screen and (min-width: 570px) {
-
-  .site-header__transparent-background {
-    background-color: rgba(0,0,0,0.8);
-  }
 }
 
 .site-header__header-content {
@@ -1062,29 +1049,19 @@ img {
   position: relative;
   height: 320px;
   background-color: #FFF;
-  box-shadow: 0 0 10px #333;
-  padding: 10px;
-  border-radius: 7px;
 }
 
 @media screen and (min-width: 570px) {
 
   .proj-box {
-    height: 300px;
+    height: 330px;
   }
-}
-
-.proj-box img {
-  border-radius: 7px;
-  box-shadow: 0 0 20px #000;
-  -webkit-transform: translateY(-15%);
-          transform: translateY(-15%);
 }
 
 .proj-box__label {
   position: absolute;
   left: 10px;
-  top: -25px;
+  top: -15px;
   font-size: .6rem;
   padding: 5px;
   color: #FFF;
@@ -1101,6 +1078,7 @@ img {
   font-size: 1rem;
   font-weight: 400;
   padding: 10px 0;
+  margin-top: 20px;
   color: #1d3f52;
 }
 
@@ -1113,7 +1091,7 @@ img {
 
 .proj-box__date {
   position: absolute;
-  top: -20px;
+  top: -10px;
   right: 10px;
   font-size: 0.7rem;
   font-weight: 200;
@@ -1184,6 +1162,7 @@ img {
   background-color: #186c9f;
   font-weight: 100;
   padding: 10px 25px !important;
+  color: #fff !important;
 }
 
 .btn__login:hover {
@@ -1440,14 +1419,8 @@ textarea:focus {
   position: relative;
   height: 520px;
   margin-top: 50px;
+	background-color: #212121;
 
-}
-
-.footer-section.lazyloaded {
-  background-image: url("../../assets/images/header-bg-image.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 @media screen and (min-width: 800px) {
@@ -1460,17 +1433,6 @@ textarea:focus {
 .footer-section .icon {
   float: left;
   margin-right: 10px;
-}
-
-.footer-section__transparent-background {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,0.6);
 }
 
 .footer-section__footer-content {
@@ -1707,7 +1669,7 @@ textarea:focus {
   opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.7);
 }
 
 @media screen and (min-width: 800px) {
@@ -1716,13 +1678,12 @@ textarea:focus {
     visibility: visible;
     opacity: 1;
     height: auto;
-    background-color: rgba(0,0,0,0.1);
+    background-color: #FFF;
     padding: 25px;
     position: fixed;/*CSS modifier when scrolling*/
   }
 
   .primary-nav--darker-background {
-    background-color: rgba(0,0,0,0.8);
     padding: 20px;
   }
 }
@@ -1789,10 +1750,12 @@ textarea:focus {
 }
 
 .primary-nav a{
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
   color: #FFF;
   opacity: 0.8;
-  font-size: 0.9rem;
-  font-weight: 100;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -1802,6 +1765,7 @@ textarea:focus {
   .primary-nav a {
     padding: 25px;
     font-size: 1rem;
+    color: #323a4e;
     position: relative;
   }
 

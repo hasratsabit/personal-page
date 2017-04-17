@@ -42,6 +42,7 @@
     background-color: #186c9f;
     font-weight: 100;
     padding: 10px 25px !important;
+		color: #fff !important;
 
       &:hover {
         background-color: $mainBlue;
