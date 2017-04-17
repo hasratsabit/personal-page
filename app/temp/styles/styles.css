@@ -1047,14 +1047,14 @@ img {
 .proj-box {
 
   position: relative;
-  height: 320px;
+  height: 350px;
   background-color: #FFF;
 }
 
 @media screen and (min-width: 570px) {
 
   .proj-box {
-    height: 330px;
+    height: 350px;
   }
 }
 
@@ -1085,6 +1085,7 @@ img {
 @media screen and (min-width: 800px) {
 
   .proj-box__title {
+    margin-top: 30px;
     font-size: 1.2rem;
   }
 }

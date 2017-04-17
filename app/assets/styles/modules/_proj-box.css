@@ -1,11 +1,11 @@
 .proj-box {
 
   position: relative;
-  height: 320px;
+  height: 350px;
   background-color: #FFF;
 
   @mixin atSmall {
-    height: 330px;
+    height: 350px;
   }
 
 
@@ -32,6 +32,7 @@
 		margin-top: 20px;
     color: $darkBlue;
     @mixin atMedium {
+			margin-top: 30px;
       font-size: 1.2rem;
     }
   }
